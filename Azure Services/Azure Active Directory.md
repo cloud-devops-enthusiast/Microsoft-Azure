@@ -6,6 +6,17 @@ The below given image shows how the Azure AD works. In this case, on the on-prem
 
 ![Image 1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1498de1802ded82db43c7e275c9543ef136b22ae/Images/azure-active-directory-a3b1df09.png)
 
+Azure Active Directory (Azure AD) is one of the most important and critical services of Azure, which is a Platform as a Service offering from Microsoft Azure. Azure AD provides more safe and secure access to the resources for organizations and individuals by:
+
+- Provisioning and de-provisioning the users
+- Managing Users and Groups
+- Monitoring the Sign-ins
+- Creating and Managing the Policies
+- Configuring the Multi-Factor Authentication (MFA)
+- Extending the On-Premises Active Directory to the Cloud
+- Integrating with the other SaaS Applications
+- Configuring the Conditional Access for Users and Devices
+
 **Azure Directory Concepts**
 
 - *Identity:* Identity is a set of attributes making it an object which can be authenticated. Identity can be considerably anything, such as a user with a username and password, a device, an application, or a service. As application or A server, that requires some kind of authentication to access these resources, by using some secret keys or certificates. Azure AD is the product in back which is responsible for the authentication of these identities.
@@ -32,7 +43,6 @@ There are Four Editions of Azure Active Directory, which comes with different fe
 
 - *Azure Active Directory Premium P2:* This edition is the second and final kind of premium edition of the Azure Active Directory. In addition of the features of the Free and P1 editions, this edition comes with some more advanced features like Azure AD Identity Protection to provide the risk-based Conditional Access to your Apps and The critical company data. This edition also comes with the Azure AD Privileged Identity Management (PIM) which help in discovery, management, and monitoring of the privileged identities and their access to the resources and to provide the just in time access to the resources.
 
-
 **Azure Active Directory Join**
 
 This features lets you to join the devices to the Azure Active Directory, which lets you to manage the devices from the Azure AD. As azure active directory enables the single sign-on (SSO) from the devices due to which IT admins must ensure the company or corporate assets are protected and secured which meet the certain standards for the security and compliance. This Azure AD join allows the whole process of accessing the devices and the resources to simplify the windows deployments and the management of the devices.
@@ -43,4 +53,12 @@ There are some things which are needed to be considered for the Azure AD Join li
 
 - You can use other Solutions for combining the registration of the device to Azure AD and the Mobile Device Management (MDM) like the Microsoft Intune. This is a cloud-based service which lets you to provide the management of the mobile devices and the PCs from a single console. This lets you to create the conditional access rules that can enforce the access from the devices which are registered to Azure AD and meet the security and compliance standards.
 
-- Azure AD Join is created for the scenarios where you have your own devices or servers which do not have the on-premises Active Directory Domain Services (AD DS) or the Azure AD Domain Services (AD DS), but you can use it for the conditions like branch offices, retail stores, or schools where you do not have the on-premises AD DS or the Azure AD DS.
+- Azure AD Join is created for the scenarios where you have your own devices or servers which do not have the on-premises Active Directory Domain Services (AD DS) or the Azure AD (AD), but you can use it for the conditions like branch offices, retail stores, or schools where you do not have the on-premises AD DS or the Azure AD DS.
+
+**Azure AD Schema**
+
+An Azure AD Schema is a set of objects which define the attributes and the objects which can be stored in the Azure AD. This schema has less number of objects than of the on-premises Active Directory Domain Services (AD DS) schema. The Azure AD schema is extensible, which means you can add your custom attributes to the same and can extend the schema too, at the same time it is reversible too, which means you can remove the custom attributes from the schema and can revert the schema to the original state.
+
+The effectiveness and efficiency of the features provided by the Azure AD depends on the schema. This schema can easily be seen as the blueprint of the Azure AD which can be easily seen in the existing deployments on the Cloud Services like Microsoft 365, Azure, and the Dynamics 365, which depends on the Azure AD for the identity management and support 'n' of users.
+
+Objects in the Application and Service Principal classes define the structure of the applications in Azure AD. Here an object in the application class represents the application defination and objects that are present in the service principal class consists of the instance in the current Azure AD tenant. Seperating away the two sets of characteristics allows you to define the application in one tenant and using it in multiple tenants by creating the service principal objects in each tenant. Azure AD creates the service principal objects automatically when you register the application in the Azure AD.

@@ -81,3 +81,69 @@ Here you need to enter the details like:
 - At the last step, you can review the configuration and click on the Create button to create the virtual network.
 
 ![Image 8](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/7ecb3325263ffef9f755469060a9b137b85911d1/Images/SS8.png)
+
+**IP Address Planning**
+
+As you're designing a whole network and you must need something to make the communication between the resources. So, you need to plan for the IP address which can help you in the communication between the cloud and on premises resources. There are two types of IP addresses which are used in the Azure Virtual Network: 
+
+- Public IP Address: Public IP address is used to communicate from the internet to the Azure resources. It is a globally unique IP address which is assigned to the resources like virtual machines, load balancers, etc. You can assign a public IP address to the resources which are exposed to the internet.
+
+- Private IP Address: Private IP address is used to communicate within the Azure Virtual Network and the on-premises network. It is a private IP address which is not exposed to the public internet. You can create a private IP address for your resources when you use VPN gateway or Azure ExpressRoute to extend your on-premises network to the Azure Virtual Network.
+
+![Image 9](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/ip-addressing-54476e47.png)
+
+You can consider the following points while planning for the IP address:
+
+- IP addresses can be assigned to the resources or the services in both ways Static and Dynamic.
+
+- Static IP addresses are best for some kind of scenarios like:
+  
+  - DNS Name resolution where if you change the IP address of the resource, you need to update the DNS record.
+
+  - Apps and Services which require a fixed IP address or the applications which are frequently trying to access the resources in the Azure Virtual Network.
+
+  - TSL and SSL certificates which are needed to be updated when the IP address of the resource changes.
+
+  - Firewall rules that allow or deny the traffic based on the IP Address ranges.
+
+**Create public IP address**
+
+- Search for the Public IP address in the search bar and click on the Public IP address from the results.
+
+![Image 10](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/SS9.png)
+
+  - Click on the Add button to create a new public IP address.
+
+- Now you need to enter the details and information about the instance you're creating.
+
+![Image 11](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/portal.azure.com__pwa%3D1(iPad%20Pro).png)
+
+  - Choose the subscription and the resource group under the Project Details section. 
+
+  - Enter the region under the Instance Details, where you want to create the public IP address.
+
+  - Under the configuration details:
+    
+    - Enter the name for your public IP address.
+
+    - Choose the IP Version as IPv4 or IPv6.
+
+    - Choose the SKU as Basic or Standard.
+
+    - Choose the Tier as Regional or Global.
+
+    - Choose the assignment as Static or Dynamic. Here it will be public IP address as we're creating a public IP address.
+
+    - Choose the Routing Preference as Microsoft Network or The Internet.
+
+    - Set the Idle Timeout in minutes.
+
+    - Enter the DNS name label, if you want to assign a DNS name to the public IP address.
+
+- Now you will move to the tag section, where you can manage and add th new tags to the public IP address, which will help you in organizing the resources in your subscription.
+
+![Image 12](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/SS10.png)
+
+- At the last step, you can review the configuration and click on the Create button to create the public IP address.
+
+![Image 13](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/SS11.png)

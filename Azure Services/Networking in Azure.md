@@ -147,3 +147,39 @@ You can consider the following points while planning for the IP address:
 - At the last step, you can review the configuration and click on the Create button to create the public IP address.
 
 ![Image 13](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/SS11.png)
+
+As, When you create a public ip address, you select either the Basic or Standard SKU, which determines the IP assignment method, security, available resources and the redundancy options.
+
+Following are the features which are supported by both the basic and standard SKU over
+
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Basic SKU</th>
+<th>Standard SKU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP assignment</td>
+<td>Static or Dynamic</td>
+<td>Static</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>Open by default</td>
+<td>Secure by default, closed to inbound traffic</td>
+</tr>
+<tr>
+<td>Resources</td>
+<td>Network interfaces, VPN gateways, Application gateways, and internet-facing load balancers</td>
+<td>Network interfaces or public standard load balancers</td>
+</tr>
+<tr>
+<td>Redundancy</td>
+<td>Not zone redundant</td>
+<td>Zone redundant by default</td>
+</tr>
+</tbody>
+</table>

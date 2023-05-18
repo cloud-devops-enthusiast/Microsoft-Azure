@@ -148,6 +148,8 @@ You can consider the following points while planning for the IP address:
 
 ![Image 13](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/92f4423e62c9f3fe119dfcdf44ec303207f061ec/Images/SS11.png)
 
+**Public IP address Allocation**
+
 As, When you create a public ip address, you select either the Basic or Standard SKU, which determines the IP assignment method, security, available resources and the redundancy options.
 
 Following are the features which are supported by both the basic and standard SKU over
@@ -183,3 +185,21 @@ Following are the features which are supported by both the basic and standard SK
 </tr>
 </tbody>
 </table>
+
+**Private IP address Allocation**
+
+A private IP address resource can be used with multiple services resources across the azure and On-prem environment.You can assign an IP address to a resource (Static IP) or Azure can also provide an IP address to a resource (Dynamic IP).
+
+Here you can see the private address assignment for different resources:
+
+- You can use the NIC to assign a private IP address to a virtual machine.
+
+- You can use the Front-end Configuration to assign a private IP address to an Application Gateway or Internal Load Balancer.
+
+But, here you need to keep some things in mind regarding the Private IP address assignment:
+
+- In case of dynamic IP address allocation, Azure assigns you the next available IP address which is unassigned or unreserved IP address in the subnet's address range. For instance, IP addresses from 10.0.0.5 to 10.0.0.12 are allocated to the resources, then it will assign the next available IP address which is 10.0.0.13.
+
+- In another case of static IP address allocation, you can select or assign any of the unassigned or unreserved IP addres from the subnet's address range. For instance, Subnet's address range is 10.0.0.0/16 out of which addresses from 10.0.0.4 to 10.0.0.9 is already assigned to other resources. In this condition you can assign any address between 10.0.0.10 and 10.0.255.254.
+
+

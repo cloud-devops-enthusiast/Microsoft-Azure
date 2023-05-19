@@ -2,6 +2,63 @@
 
 A Virtual network is a kind of network which is used to connect the virtual devices or machines together, without any physical connection. Virtual Networks are essential and fundamental part of the Azure networking model that allows to enable the resources to communicate with other services in azure. Communication can happen between the resources over the internet with the on-premises internet.
 
+**Azure Virtual Networks**
+
+Azure Virtual Network(VNets) are basic blocks of the private network in Azure. VNets allows you to make complex virtual network which can be similar to of the on-premises network, with the features of cloud or Azure Infrastructure like scaling, availability and isolation.
+
+Every VNets which is created in azure that has its own CIDR Block and can be linked with the other VNets and other on-premises network till the CIDR blocks of the VNets are not overlapping.
+
+The Capabilities of Azure Virtual Network are:
+
+- *Communication with the Internet:* All resources under the virtual network can communicate with the internet in outbound direction and can receive the inbound communication to the resources by using a public IP address or a public load balancer. You can use the same public IP address or public load balancer for multiple resources.
+
+- *Communication between Azure Resources:* There are three ways in which the Azure Resources can communicate with each other:
+
+  - First, VNets which can not only connect the VMs but also other Azure Resources like App Service Environments, Azure Kubernetes Service and Azure Virtual Machine Scale Sets.
+
+  - Second, Azure Service Endpoints which can connect to the other Azure Resources Type like Azure SQL Databases and Storage Accounts.
+
+  - Third, VNet Peering which can connect the VNets to each other, that allows your services and VMs to communicate with each other in the cloud.
+
+- *Communication with on-premises Resources:* You need to securely extend the on-premises network to the cloud to communicate with the resources in the cloud. You can use the Point-to-Site VPN, Site-to-Site VPN and Azure ExpressRoute to connect the on-premises network to the cloud.
+
+- *Filtering Network Traffic:* You can use the Network Security Groups and the network virtual appliances like firewalls, gateways, proxies and Network Address Translation(NAT) services to filter the network traffic between subnets and the VNets.
+
+- *Routing Network Traffic:* Azure can route traffic between subnets, VNets, on-premises network and internet. You can implement the route tables or border gateway protocol(BGP) to override the default routes Azure creates.
+
+For Instance consider, The IP Address range of 192.168.1.0/24 has some of the IP addresses in  reserve state:
+
+- 192.168.1.0: Which is the Network Address.
+- 192.168.1.1: This is reserved for the default gateway.
+- 192.168.1.2, 192.168.1.3: These are reserved by Azure to map the Azure DNS IPs to VNet space.
+- 192.168.1.255: This is the network broadcast address.
+
+**Subnets**
+
+Subnets can be considered as the sub-networks or divisions of the virtual network (VNets), creating subnets as per the requirement in your organization and security in the subscription limit. You can deploy resources to the subnets and can also control the traffic between the subnets. Subnets allow you to segment your VNet address space into multiple segments, which improves the address allocation efficiency. The smallest suported IPv4 subnet is /29 and the largest one is /2 (Using the CIDR defination). IPv6 subnets must be /64 in size. There are some things which you need to keep in mind while creating the subnets:
+
+- Each subnet should have a unique address range under which the resources can work, and it should be specified in CIDR notation.
+
+- There are some Azure services that requires there own subnet.
+
+- Subnets can be used for traffic management as well. For example, You can create multiple subnets to route the traffic through the network virtual appliances like firewalls, proxies and gateways.
+
+- You can limit the access of the Azure Resources to some specific subnets with the virual network service endpoints. You can create subnets and enable the service endpoints for some subnets and not for others. It is more of like a security feature, like if you have multiple flats in a city but you don't allow the people from one flat to enter the other flat or certain flats where you have kept your personal belongings.
+
+**Azure Availability Zones**
+
+As the name shows Availability Zone, it is used to define unique physical locations in a region. Every zone is made of one or more datacenters with multiple functionalities like Power, Cooling and Networking. It is designed to ensure the high availability of azure services. This allow you the seperation of Availability zone in a region protects applications and data from the datacenter failures.
+
+You can consider the availability zone when it is designed for your azure network, and plan for services that supports availability zones.
+
+Azure services that supports Availability Zones are divided into three categories:
+
+- Zonal Services: Resources can be pinned or specified to a single zone, for example like Virtual Machines, Managed Disks or the standard IP addresses which helps in increased resiliency by having one or more instances of resources spread across the zones in a region.
+
+- Zone Redundant Services: Resources are replicated or distributed across zones automatically, in this way if any of the zone goes down, the resouces and servics will be keep running and being available in the other zone.
+
+- Non-Regional Services: Services are always available from different azure geographies and are proned to zone wide failures or region wide failures.
+
 **Planning Virtual Networks**
 
 A big benefit of migrating to cloud from the on-prem environment is to save the overall costs and simplify the administrative operations on the IT infrastructure. As after migrating to azure, the IT team needs to make the same networking functionality in the cloud environment too. So, in some kind of scenarios the resources require some kind of network isolation so that they can stay secure and risk free. Azure network services comes with many features and services.
@@ -25,6 +82,8 @@ As you have planned for the virtual network in azure, you can use the Azure Virt
 - You can also plan for the network security groups and the routing tables for the virtual network.
 
 - Try to use a IP address space which is not used by any other network or the on-premises network in case of migration. Keep this in mind you can't redefine the IP address space once the virtual network is created.
+
+Azure assigns the resources in a virtual network a private IP address for the address space that you have provisioned, For example, if you deploy a virtual machine in a virtual network or VNet with subnet address space 192.168.1.0/24, the VM will be assigned a private IP address like 192.168.1.4, as Azure reserves the first four and last IP addresses in each subnet, for total of 5 IP addresses.
 
 **Create a Virtual Network**
 
@@ -201,5 +260,4 @@ But, here you need to keep some things in mind regarding the Private IP address 
 - In case of dynamic IP address allocation, Azure assigns you the next available IP address which is unassigned or unreserved IP address in the subnet's address range. For instance, IP addresses from 10.0.0.5 to 10.0.0.12 are allocated to the resources, then it will assign the next available IP address which is 10.0.0.13.
 
 - In another case of static IP address allocation, you can select or assign any of the unassigned or unreserved IP addres from the subnet's address range. For instance, Subnet's address range is 10.0.0.0/16 out of which addresses from 10.0.0.4 to 10.0.0.9 is already assigned to other resources. In this condition you can assign any address between 10.0.0.10 and 10.0.255.254.
-
 

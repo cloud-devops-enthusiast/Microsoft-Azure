@@ -85,6 +85,16 @@ As you have planned for the virtual network in azure, you can use the Azure Virt
 
 Azure assigns the resources in a virtual network a private IP address for the address space that you have provisioned, For example, if you deploy a virtual machine in a virtual network or VNet with subnet address space 192.168.1.0/24, the VM will be assigned a private IP address like 192.168.1.4, as Azure reserves the first four and last IP addresses in each subnet, for total of 5 IP addresses.
 
+**Azure DNS**
+
+Azure DNS is a service by Microsoft Azure which allow you to host and manage the domain name system (DNS) domains, also called as DNS Zones. A DNS Zone can be said as the collection of the DNS Records. DNS records can relate to a Fully Qualified Domain Name (FQDN) associated with the Zone to an IP Address or any other DNS Record. For example, if you have a domain name like example.com, you can create a DNS zone for it in Azure DNS, and can add records to the zone that specifies the mapping of the domain name to the IP address of the web server that hosts the website for the domain. In short you can say Azure DNS is just like a telephone exchange which maps the phone numbers to the names.
+
+Azure DNS allows you to configure and manage zones data using the Azure Portal, Azure CLI, Azure PowerShell and the REST APIs. At the DNS zone you can manage the zone data using the Azure Tools rather than using any other tools provided by the domain registrar. As Azure DNS is hosted on Microsoft's Azure Infrastructure, the services are more reliable and secure than the other DNS services.
+
+You can fully integrate the Azure DNS with the Azure Resources, Azure DNS provider functionality allowing you to manage and update the records for the azure services whenever you make any change to the resources. For example, if you delete a VM, the DNS record for the VM will also be deleted automatically.
+
+Azure DNS supports all common DNS records types like A, AAAA, CNAME, MX, PTR, SOA, SRV and TXT records. Azure DNS supports the map that supports both of the IPv4 and IPv6 addresses and similarly the DNS servers can be accessed by the client using both of the IPv4 and IPv6 addresses.
+
 **Create a Virtual Network**
 
 - Seach for the Virtual Network in the search bar and click on the Virtual Network from the results.

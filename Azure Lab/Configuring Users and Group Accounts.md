@@ -76,4 +76,24 @@ Send invite message Checkbox: This is the checkbox which is used to configure th
 
 Cc recipient: Here you can enter the email address of the user whom you want to send the copy of the invite message.
 
-![Image 4.1](
+![Image 4.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/84edf8e0f2278dd597acbf07772577aaa36bf77b/Images/Screenshot%202023-07-03%20234938.png)
+
+4.2. Moving to the another section of the properties, with details like Identity, Job Information, Contact Information, Parental Controls and Settings. Here you need all the details of that specific user account so they can be identified easily.
+
+![Image 4.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/d59af6d0b6e03b4c3ca2ce4f0beffd9e2596d7e8/Images/portal.azure.com__pwa%3D2.png)
+
+4.3. Moving to the another section of Assignments where you can assign the user account to the specific group or the role. Here we will be assigning the *Global Reader* role to the user account.
+
+![Image 4.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/a16d2c36fc99a51c8feba3f8cae02cd070ce28f1/Images/Screenshot%202023-07-03%20235706.png)
+
+4.4. Now moving to the another section where we will be reviewing the details entered and can make the change if required.
+
+![Image 4.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/876af9662f47af06355a12fcef1cf035bd5e7df1/Images/Screenshot%202023-07-04%20000331.png)
+
+4.5. Click on the Invite button to invite the external user. Here you can see the external user is invited successfully.
+
+![Image 4.5](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/0237169b9bf5374da105173dcd338c62084bd730/Images/Screenshot%202023-07-04%20000550.png)
+
+4.6. Click on the user account to see the details of the invited user account. Here you can see the details of the invited user account.
+
+![Image 4.6](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/0bfc7751ed13b8bb4afc975058ebe3453fc9f104/Images/Screenshot%202023-07-04%20000812.png)

@@ -97,3 +97,57 @@ Cc recipient: Here you can enter the email address of the user whom you want to 
 4.6. Click on the user account to see the details of the invited user account. Here you can see the details of the invited user account.
 
 ![Image 4.6](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/0bfc7751ed13b8bb4afc975058ebe3453fc9f104/Images/Screenshot%202023-07-04%20000812.png)
+
+**Bulk User Account Creation**
+
+5.1. Go to the Users section of Azure, and choose the *Bulk Operation* option under that choose *Bulk Create* option.
+
+![Image 5.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/21d67df22b99cab73b6d0a6c9b002efbc41fe5b5/Images/Screenshot%202023-07-04%20195921.png)
+
+5.2. Click on the Download CSV template option to download the CSV template. Here you can see the CSV template is downloaded successfully. Now enter all the details of the user account in the CSV template. Here we will be creating the user account with the name User1 and User2, for which upload the edited CSV file to *Upload your csv file* option.
+
+![Image 5.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/68ab6dd25f4483e9002a0a67bcfe050ed83354a1/Images/Screenshot%202023-07-04%20224727.png)
+
+5.3. Click on Submit. After which the process will be showing *In Progress* status which will starting a bulk process of creating the user accounts and after the process is completed it will show the status as *Completed with no errors*.
+
+![Image 5.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/856aa30b5e264cf5072243d7460c883bec9cbdfc/Images/Screenshot%202023-07-04%20225836.png)
+
+5.4. Now you can see the user accounts are created successfully with the name User1 and User2.
+
+![Image 5.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/420eab51a872b99b61c104439829ac479443f8a2/Images/Screenshot%202023-07-04%20231355.png)
+
+**Group Accounts**
+
+There are two types of group accounts in Azure:
+
+1. Security Group: This group is used to manage the access to the resources. This can be implemented only by an Azure AD administrator.
+
+2. Microsoft 365 Group: This group is used to manage the access to the Microsoft 365 services. This can be implemented by both normal or an Azure AD administrator.
+
+There are some things to be considered while giving access rights to the group accounts:
+
+1. If you want to give *Assigned* access rights, then give unique permissions to the members of the group account and only add specific kind of users to the group account only.
+
+
+####################
+
+
+**Create Group Accounts**
+
+6.1. Go to the Groups section of Azure, and choose the *New Group* option under that choose *New Group* option. Enter all the details of the group account.
+
+- Group Type: Choose the type of the group account, here we will be choosing the *Security* group type.
+
+- Group Name: Enter the name of the group account, here we will be entering the name as *Group 1*.
+
+- Group Description: This contains the description of the group account, here we will be entering the description as "This group will allow the members of the group to manage the resources."
+
+- Membership Type: This contains the type of the membership of the group account, here we will be choosing the *Assigned* membership type.
+
+- Owner: This contains the owner of the group account, here we will be choosing the *my account* as the owner of the group account.
+
+![Image 6.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/a4c2a624974a233e4246061e82ee2e3271d8b185/Images/Screenshot%202023-07-04%20233913.png)
+
+6.2. Now you can see the account is created successfully with the name Group 1.
+
+![Image 6.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1bf635809f4605d45e7bc32dd0a37dd7160e00c8/Images/Screenshot%202023-07-05%20004247.png)

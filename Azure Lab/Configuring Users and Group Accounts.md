@@ -152,7 +152,7 @@ There are some things to be considered while giving access rights to the group a
 
 ![Image 6.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1bf635809f4605d45e7bc32dd0a37dd7160e00c8/Images/Screenshot%202023-07-05%20004247.png)
 
-**Create Administrative Units**
+**Administrative Units**
 
 Administrative units are usually used in the organizations where there are multiple individual or independent departments and each department has their own resource where it can be useful to restrict the administrative scope of the users roles and responsibilities. This can be implemented only by an Azure AD administrator.
 
@@ -161,3 +161,5 @@ Administrative units are usually used in the organizations where there are multi
 - Create the administrative units based on the departments of the organization.
 
 - You need to specifically assign the users of IT Engineering department with the roles and their scope.
+
+**Create Administrative Units**

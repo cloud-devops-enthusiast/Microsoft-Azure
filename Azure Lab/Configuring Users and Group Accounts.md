@@ -128,9 +128,9 @@ There are some things to be considered while giving access rights to the group a
 
 1. If you want to give *Assigned* access rights, then give unique permissions to the members of the group account and only add specific kind of users to the group account only.
 
+2. If you want to give *Dynamic membership* access rights, then you can automatically add or remove the group members based on the rules defined by you.
 
-####################
-
+3. If you want to give *Dynamic Device* access rights, then you can add or remove the devices in your security groups. If any kind of attributes of the device changes, then the device will be automatically added or removed from the group account.
 
 **Create Group Accounts**
 
@@ -151,3 +151,4 @@ There are some things to be considered while giving access rights to the group a
 6.2. Now you can see the account is created successfully with the name Group 1.
 
 ![Image 6.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1bf635809f4605d45e7bc32dd0a37dd7160e00c8/Images/Screenshot%202023-07-05%20004247.png)
+

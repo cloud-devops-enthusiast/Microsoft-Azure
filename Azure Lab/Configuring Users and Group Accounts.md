@@ -163,3 +163,27 @@ Administrative units are usually used in the organizations where there are multi
 - You need to specifically assign the users of IT Engineering department with the roles and their scope.
 
 **Create Administrative Units**
+
+7.1. Go to the Administrative units section of Azure, Click on the *ADD* option to create the administrative unit.
+
+7.2. Enter all the details of the administrative unit in the properties section.
+
+- Name: In this section enter the name of the administrative unit, here we will be entering the name as *Engineering Team*.
+
+- Description: In this section we will be providing the description of the administrative unit, here we will be entering the description as "This team consists of members which are responsible for managing the resources and providing access".
+
+- Restricted Management Administrative Unit: This option allows you to block the tenant level administrators from accessing this administrative unit, here we will be choosing the *No* option.
+
+![Image 7.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/9ef1a0a199e883eafc558141ada20797e64126f4/Images/Screenshot%202023-07-08%20001128.png)
+
+7.3. In this section you will need to assign the roles to the users under the administrative unit. Click on each of the role and assign the users to the roles.
+
+![Image 7.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/820d4b8188f1332cce51abacc032fbc1372432ed/Images/Screenshot%202023-07-08%20011833.png)
+
+7.4. In this one of the last section you will need to review all the details of the administrative unit and click on the *Create* option to create the administrative unit.
+
+![Image 7.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/77f84a673e204bd43bca3d668637fd8486117780/Images/Screenshot%202023-07-08%20012216.png)
+
+7.5. Now you can see the administrative unit is created successfully with the name Engineering Team.
+
+![Image 7.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/96bc4a773c03a08fa6f92c2c39fc3cf45d67aa38/Images/Screenshot%202023-07-08%20015016.png)

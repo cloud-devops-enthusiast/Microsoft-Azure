@@ -187,3 +187,17 @@ Administrative units are usually used in the organizations where there are multi
 7.5. Now you can see the administrative unit is created successfully with the name Engineering Team.
 
 ![Image 7.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/96bc4a773c03a08fa6f92c2c39fc3cf45d67aa38/Images/Screenshot%202023-07-08%20015016.png)
+
+**Deleting Bulk Users**
+
+8.1. Click on the *Bulk delete* option under the users section of Azure and click on the *Download* option to download the CSV file.
+
+![Image 8.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/2b226758efeaccf0b3949bde022fee2a8beaf3a5/Images/Screenshot%202023-07-09%20193413.png)
+
+8.2. Open the CSV file and enter the User name [userPrincipalName] of the users you want to delete and save the file. Now upload the CSV file and click on the *Delete* option to delete the users.
+
+![Image 8.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/2b226758efeaccf0b3949bde022fee2a8beaf3a5/Images/Screenshot%202023-07-09%20193634.png)
+
+8.3. Now you can see the users are deleted successfully from the Azure AD and can check for the delete users in the bulk operations result.
+
+![Image 8.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/2b226758efeaccf0b3949bde022fee2a8beaf3a5/Images/Screenshot%202023-07-09%20193708.png)

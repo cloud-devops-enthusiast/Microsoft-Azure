@@ -2,6 +2,16 @@
 
 Azure policy is a service by Microsoft Azure which allows you to Create, Assign and Manage Polices to control or audit of your resources in Azure. These policies make the resources in Azure to be compliant with the rules and regulations with the corporate standards and service level agreements. You can enforce these policies using the management groups. Azure Policies evaluate and access your resources to make them sure that they are compliant with the policies that you have enforced in place.
 
+When you plan to implement the Azure policies, you need to consider the following things:
+
+- Consider Deployable Resources: Before you enforce any policy you need to specify the scope of the policy, like here you need to specify the resources that you can deploy using the Azure policy. You can specify the set of Virtual Machines, Storage Accounts, Key Vaults, etc that under your organization can deploy. 
+
+- Consider Location Restrictions: You can also specify the locations where the resources can be deployed. You can specify the locations like the regions or geographical locations which are available to your organizations.
+
+- Consider Rules Enforcement: You can specify the rules and the configuration options under which the resources can be deployed in your organization. You can also specify the required tags for the resources that are deployed in your organization.
+
+- Consider Inventory Audits: You can use the Azure policy here with Azure Backup Service over your workloads and run inventory audits to make sure that the resources are compliant with the policies that you have enforced in your organization while ensuring the backup of your resources.
+
 **Advantages of Azure Policies**
 
 - Enforce Rules and Compliance: This allows you to enforce the rules and compliance on the resources in azure. Azure policies can here be used for the real time policy evaluation which makes it more practical to test the policies before enforcing them also if you want to do some changes in the policies you can take some time or periodic changes to the policies which makes it more flexible to on-demand compliance and governance.
@@ -10,7 +20,7 @@ Azure policy is a service by Microsoft Azure which allows you to Create, Assign 
 
 - Perform Remediation: Azure policies can be used for the real time remediation of your resources or the existing resources in your management group. You can also use the policies to remediate the resources which are not compliant with the policies.
 
-- Exercise Governance: Azure policies can be used to exercise or implement the governance tasks in the environment. These consists of tasks like the policy assignment to multiple engineering teams, while managing multiple subscriptions. This also helps in the standardization and enforcing of the cloud resources configurations across the organization, under the management group where you need to enforce the compliance, cost control, security and design consistency. 
+- Exercise Governance: Azure policies can be used to exercise or implement the governance tasks in the environment. These consists of tasks like the policy assignment to multiple engineering teams, while managing multiple subscriptions. This also helps in the standardization and enforcing of the cloud resources configurations across the organization, under the management group where you need to enforce the compliance, cost control, security and design consistency.
 
 **Management Groups**
 

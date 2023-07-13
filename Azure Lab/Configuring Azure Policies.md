@@ -22,7 +22,7 @@ You can create Azure policies using Azure CLI or Azure portal. Here we will crea
 
 - Step 3: Scope of the initiative definition: Azure Policies lets you to control how the initiative definitions are enforced to your resources in your organization. In the same you can also specify the scope of the initiative definition to the specific management groups, subscriptions or resource groups.
 
-- Step 4: Determine Compliance:
+- Step 4: Determine Compliance: As you allot the initiative definition, where you can check the compliance of the resources in your organization. Individual resources, resource groups and subscriptions within a scope can be unchecked from the compliance of the initiative definition. Exclusions are handled individually for each initiative definition.
 
 **Advantages of Azure Policies**
 

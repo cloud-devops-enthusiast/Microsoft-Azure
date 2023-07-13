@@ -12,6 +12,18 @@ When you plan to implement the Azure policies, you need to consider the followin
 
 - Consider Inventory Audits: You can use the Azure policy here with Azure Backup Service over your workloads and run inventory audits to make sure that the resources are compliant with the policies that you have enforced in your organization while ensuring the backup of your resources.
 
+**Creating Azure Policies**s
+
+You can create Azure policies using Azure CLI or Azure portal. Here we will create the Azure policies using the Azure portal. There are four basic steps which are required to create the Azure policies:
+
+- Step 1: Create the policy definition: A policy definition is just like a logic which needs to be satisfied by the resources to perform certain actions in your organization. You can either create your own policy definitions or you can use the buil-in-policy definitions. For example, you can create a policy definition to specify the locations where the resources can be deployed in your organization.
+
+- Step 2: Create an initiative definition: An initiative definition is a collection of multiple policy definitions which help you to keep log of the compliance of your resources and also gives you a wider scope to manage the policies. You can either create your own initiative definitions or you can use the built-in initiative definitions. You can use the initiative definition to verify and ensure your resources are compliant with the security requirements.
+
+- Step 3: Scope of the initiative definition: Azure Policies lets you to control how the initiative definitions are enforced to your resources in your organization. In the same you can also specify the scope of the initiative definition to the specific management groups, subscriptions or resource groups.
+
+- Step 4: Determine Compliance:
+
 **Advantages of Azure Policies**
 
 - Enforce Rules and Compliance: This allows you to enforce the rules and compliance on the resources in azure. Azure policies can here be used for the real time policy evaluation which makes it more practical to test the policies before enforcing them also if you want to do some changes in the policies you can take some time or periodic changes to the policies which makes it more flexible to on-demand compliance and governance.

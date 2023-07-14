@@ -24,6 +24,32 @@ You can create Azure policies using Azure CLI or Azure portal. Here we will crea
 
 - Step 4: Determine Compliance: As you allot the initiative definition, where you can check the compliance of the resources in your organization. Individual resources, resource groups and subscriptions within a scope can be unchecked from the compliance of the initiative definition. Exclusions are handled individually for each initiative definition.
 
+For Creating the Azure Policies, you need to follow the below steps:
+
+1.1: Search for the **Policy** in the Azure portal and select the **Policy** from the search results.
+
+![Image 1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/553c263be85ae775d744613fd66c0cf4e030e142/Images/Screenshot%202023-07-14%20221846.png)
+
+1.2: In the **Policy** blade, select the **Definitions** from the left pane. Here you can see the list of the built-in policy definitions. You can also create your own policy definitions by selecting the **+ Policy definition**.
+
+![Image 2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/7ccd0f40db63a5ef8cb4eab8e012895ffca33955/Images/Screenshot%202023-07-15%20000927.png)
+
+1.3: As you start with creating a *Policy Definition* you need to add the following details:
+
+- **Definition location**: It will be the location where you want to create the policy definition. You can select the location from the drop-down list. Here we have two options, either we can use the *Management Groups* or *Subscriptions*.
+
+![Image 3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/9b0eac8038f18b68860aeb2e1810fbb4969ed99f/Images/Screenshot%202023-07-15%20015006.png)
+
+- **Name**: It will be the name of the policy definition.
+
+- **Description**: It will be the description of the policy definition.
+
+- **Category**: It will be the category of the policy definition whether it can be a newly created or an existing one.
+
+- **Policy rule**: It will be the rule which you want to enforce on the resources in your organization. You can either create your own policy rule or you can use the built-in policy rule. Here we will use the built-in policy rule.
+
+![Image 4]()
+
 **Advantages of Azure Policies**
 
 - Enforce Rules and Compliance: This allows you to enforce the rules and compliance on the resources in azure. Azure policies can here be used for the real time policy evaluation which makes it more practical to test the policies before enforcing them also if you want to do some changes in the policies you can take some time or periodic changes to the policies which makes it more flexible to on-demand compliance and governance.

@@ -26,6 +26,8 @@ You can create Azure policies using Azure CLI or Azure portal. Here we will crea
 
 For Creating the Azure Policies, you need to follow the below steps:
 
+1. Creating the Policy Definition
+
 1.1: Search for the **Policy** in the Azure portal and select the **Policy** from the search results.
 
 ![Image 1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/553c263be85ae775d744613fd66c0cf4e030e142/Images/Screenshot%202023-07-14%20221846.png)
@@ -48,7 +50,49 @@ For Creating the Azure Policies, you need to follow the below steps:
 
 - **Policy rule**: It will be the rule which you want to enforce on the resources in your organization. You can either create your own policy rule or you can use the built-in policy rule. Here we will use the built-in policy rule.
 
-![Image 4]()
+![Image 4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/0edca863d8216762f6bc5333ada3a0540ab1f7e4/Images/portal.azure.com__pwa%3D1%20(1).png)
+
+1.4: Click on *Save* to save the policy definition. Now you can see the newly created policy definition in the list of the policy definitions.
+
+![Image 5](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/cdcd7995463991bf0a1f81e1d4e8e9f11205adbf/Images/Screenshot%202023-07-15%20135736.png)
+
+2. Creating the Initiative Definition
+
+2.1: Search for the **Policy** in the Azure portal and select the **Policy** from the search results. Select the **+ Initiative Definition** from the upper menu. 
+
+![Image 6](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/ca5af7dbbd335e4c74578cf5743e9ee22dfa81d2/Images/Screenshot%202023-07-15%20150034.png)
+
+2.2: As you start with creating a *Initiative Definition* you need to add the following details in the *Basics* tab:
+
+- **Initiative location**: It will be the location where you want to create the initiative definition. You can select the location from the drop-down list. Here we have two options, either we can use the *Management Groups* or *Subscriptions*.
+
+- **Name**: It will be the name of the initiative definition.
+
+- **Description**: It will be the description of the initiative definition.
+
+- **Category**: It will be the category of the initiative definition whether it can be a newly created or an existing one.
+
+![Image 7](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/0fb587d6d1910b8a3ed40e4059c0cfe323dbafd6/Images/Screenshot%202023-07-15%20153903.png)
+
+2.3: Now you need to add the following details in the *Policies* tab: Here you can add the policy definitions which you want to add in the initiative definition. You can either add the policy definitions from the list of the policy definitions or you can create your own policy definitions.
+
+![Image 8](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/8cd2919986696a0d46f45406b34db3495b89ae63/Images/Screenshot%202023-07-15%20155015.png)
+
+2.4: Now you will be having the *Groups* option in the tab. Here you can add the groups to the initiative definition. You can either add the groups from the list of the groups or you can create your own groups.
+
+![Image 9](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/fa3f2bca6aaa52fb27ae2f06840310ee032c4356/Images/Screenshot%202023-07-15%20160547.png)
+
+2.5: Coming over to the another section of the tab of *Initiative parameters*. Initiative parameters are the parameters which can be re-used in the policy definitions. You can add the initiative parameters by clicking on the *Create Initiative parameter*.
+
+![Image 10](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/6d4e68001c08a07b1ddafc98fa1c55c9986e3c7c/Images/Screenshot%202023-07-15%20164302.png)
+
+2.6: Now you need to add the following details in the *Policy parameters* tab. Here you can specify the policy parameters input values. You can add the policy parameters by selecting from the value type and value options.
+
+![Image 11](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/be4ec23138f50ef9de85a7d6e8396d00858facbc/Images/Screenshot%202023-07-15%20171558.png)
+
+2.7: On the last screen you will be having the *Review + create* tab. Here you can review all the details which you have added in the previous tabs. 
+
+![Image 12](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/8597fd302dff8778534349058d94120e43fb5315/Images/Screenshot%202023-07-15%20172337.png)
 
 **Advantages of Azure Policies**
 

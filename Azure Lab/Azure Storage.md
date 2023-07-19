@@ -9,3 +9,7 @@ There are mainly three categories of storage options available in Azure Storage:
 - *Unstructured Data:* This is a kind of data which doesn't have a specific format. This type of data is stored can't be stored in the traditional databases, as Unstructured data has its own internal structure. The format of unstructured data is more to be referred as non-structural data.
 
 - *Structured Data:* It is a data which is stored in a structured format, which has a well-defined structure and can be stored in the traditional databases. The data is stored in the form of rows and columns. This type of data is also referred as relational data. Tables are an autoscaling no-sql database service that is provided by Azure.
+
+There are primarily four types of storage accounts available in Azure:
+
+- *Standard general-purpose v2:* This is the most commonly used type of storage account 

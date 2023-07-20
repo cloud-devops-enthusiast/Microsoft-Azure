@@ -29,3 +29,9 @@ So, there are certain things which you need to have in place for consideration:
 - *Consider Durability and Availability:* You need to know Azure Storage is durable and highly available resource. Where, Redundancy keeps check of your data is safe during the times of downtime, and Availability keeps check of your data is available for access during the times of downtime. 
 
 - *Consider Secure Access:* Every bit of data stored into Azure is secured by default using the encryption. Also, Azure Storage provides you with the granular control over the access of the data stored into it. You can control the access of the data stored into Azure Storage using the Azure Active Directory, Shared Access Signatures and by using the Access Keys.
+
+- *Consider Scalability:* Azure storage is scalable based on the requirement like adding more storage space or increasing the throughput. You can scale the storage account based on the requirement.
+
+- *Consider Manageability:* This feature of Azure Storage provides you with tools and utilities to manage the data stored into Azure Storage while handelling the hardware maintainence, upgrades and patching the critical issues for your sake.
+
+- *Consider Data Accessibility:* Azure storage allows you to access data from anywhere in the world over the internet using HTTP or HTTPS. You can also access the data stored into Azure Storage using the Azure Portal, Azure CLI, Azure PowerShell, Azure Storage Explorer, Azure Storage Client Libraries, Azure REST API and Azure Storage REST API.

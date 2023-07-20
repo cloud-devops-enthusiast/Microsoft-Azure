@@ -12,4 +12,20 @@ There are mainly three categories of storage options available in Azure Storage:
 
 There are primarily four types of storage accounts available in Azure:
 
-- *Standard general-purpose v2:* This is the most commonly used type of storage account 
+- *Standard general-purpose v2:* This is the most commonly used type of storage account and generally available as a default option. This kind of storage consists of Blob Storage (Data Lake Storage), Queue Storage, Table Storage and Azure Files as Storage options.
+
+- *Premium block blobs:* This type of storage account is primarily used for storing the data of scenarios with high number of transactions or to store smaller objects or to have low storage latency. This type of storages comes with LRS (locally redundant storage) and ZRS (zone redundant storage) options. This kind of storage consists of Blob Storage (Data Lake Storage) as Storage option.
+
+- *Premium file shares:* This kind of storage account is specifically used for sceanrios where you need to have higher performance and higher throughput. The use of this account is adviced in case if you need to have storage account that should support both Server Message Block (SMB) and NFS or Network File Shares. This storage account comes with LRS (locally redundant storage) and ZRS (zone redundant storage) options. This kind of storage consists of Azure Files as Storage option.
+
+- *Premium Page Blobs:* This kind of storage account is specifically used for the scenarios where you need to have something in behind to support your Azure IaaS. The storage service available under this option is Page Blobs. This storage account comes with LRS (locally redundant storage) only.
+
+*The above stated 3 storage account options are available only in the premium tier which have SSDs as the underlying storage media due to which they are able to achieve lower latencies and higher throughput.*
+
+As I have mentioned earlier in my older blogs, You need to think and verify the requirement on which you will be deploying the resources in Azure. You must be aware of the fact that the resources deployed in Azure are charged on the basis of the usage. So, keep your resources in check and deploy only those resources which are required for your application to run.
+
+So, there are certain things which you need to have in place for consideration:
+
+- *Consider Durability and Availability:* You need to know Azure Storage is durable and highly available resource. Where, Redundancy keeps check of your data is safe during the times of downtime, and Availability keeps check of your data is available for access during the times of downtime. 
+
+- *Consider Secure Access:* Every bit of data stored into Azure is secured by default using the encryption. Also, Azure Storage provides you with the granular control over the access of the data stored into it. You can control the access of the data stored into Azure Storage using the Azure Active Directory, Shared Access Signatures and by using the Access Keys.

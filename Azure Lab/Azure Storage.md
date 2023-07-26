@@ -35,3 +35,18 @@ So, there are certain things which you need to have in place for consideration:
 - *Consider Manageability:* This feature of Azure Storage provides you with tools and utilities to manage the data stored into Azure Storage while handelling the hardware maintainence, upgrades and patching the critical issues for your sake.
 
 - *Consider Data Accessibility:* Azure storage allows you to access data from anywhere in the world over the internet using HTTP or HTTPS. You can also access the data stored into Azure Storage using the Azure Portal, Azure CLI, Azure PowerShell, Azure Storage Explorer, Azure Storage Client Libraries, Azure REST API and Azure Storage REST API.
+
+**Azure Storage Services**
+
+*Azure Blob Storage*
+
+Azure Blob Storage is a cloud storage service which is used to store the large amount of unstructured data which is larger in size in the cloud. This unstructured or object data can be text or binary data. The Azure Blob storage is perfect fit for following scenarios:
+
+- Providing images and documents directly access to the browsers.
+- Storing files at a remote location and accessing them from anywhere in the world.
+- Streaming audio and video.
+- Storing the data which is used for backup and restoring, disaster recovery and archiving.
+- Storing the data for analysis by on-premises users or by the Azure Services like Azure Machine Learning and Azure Data Factory.
+
+Azure Blob Storage is a service that allows the users to access the objects using HTTP or HTTPS. As mentioned similarly the objects can be accessed using the URL's, The Azure Storage REST APIs, Azure PowerShell, Azure CLI, or Azure Storage client library. The storage client libraries are available in multiple languages including .NET, Java, Node.js, Python, php and Ruby.
+

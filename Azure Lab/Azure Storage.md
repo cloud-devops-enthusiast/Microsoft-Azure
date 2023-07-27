@@ -50,3 +50,6 @@ Azure Blob Storage is a cloud storage service which is used to store the large a
 
 Azure Blob Storage is a service that allows the users to access the objects using HTTP or HTTPS. As mentioned similarly the objects can be accessed using the URL's, The Azure Storage REST APIs, Azure PowerShell, Azure CLI, or Azure Storage client library. The storage client libraries are available in multiple languages including .NET, Java, Node.js, Python, php and Ruby.
 
+*Azure Files*
+
+Azure Files is a cloud storage service provided by Microsoft Azure which allows you to setup a highly available network file share. These file shares can be accessed using the Server Message Block (SMB) protocol or by using the Network File Shares (NFS) protocol. Here Multiple services can share the same file shares at the same time both with read and write access. Azure files can be accessed by using the Azure REST interface and or using the azure storage client libraries.

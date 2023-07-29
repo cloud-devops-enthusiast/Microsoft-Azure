@@ -83,3 +83,18 @@ Azure Table Storage is a cloud storage service to have a fully managed NoSQL dat
 
 This also allow it to handle the capacity management with cost effectively serverless and autoscaling options for the applications which are used for the internet of things (IoT) and other applications which are used for the web.
 
+**Replication Strategies in Azure Storage**
+
+Replication is a process of copying the data from one location to another location. This process of replication is just like keeping your data safe secure at multiple places so if the data of one location gets corrupted or lost then you can recover the data from the other location. Replication also helps in complying to the standards of the data compliance. Azure Storage provides you with the following replication strategies:
+
+- *Locally Redundant Storage (LRS):* This is the cheapest option available for the replication of the data, as it replicates the data within the same data center. This is the default option available for the replication of the data. If a condition like fire or flooding happens in your datacenter where your data is stored then you will lose your data. This option is suitable for some of the scenarios like:
+
+    - Your data is not a critical data stored by the application and can be recovered easily.
+    - Your data is more of like a temporary data or a cache data or a regularly changing data like live feeds or logs, storing which is not a big deal.
+    - Your data governance policies don't require you to store the data in multiple data centers.
+
+- *Zone Redundant Storage (ZRS):* As the name suggests the data is stored in the multiple zones situated in a single region. It is simply have 3 houses in 100km of radius and you store 3 data of your car location in each of the house. In this way every single data is stored in 3 different locations. Each zone is a separate physical location within an Azure region and every zone has its own availability zone. So all the entities of the zones and availiablity zones are different from each other. Storing your data in this fashion allows you to recover your data in case of any disaster happens in any of the zone as the data will be available in the other zone. This options allows you to have low latency and excellent overall performance.
+
+
+    - Zone Redundant Storage is not available in all of the regions.
+    - Switching to Zone Redundant Storage from Local Redundant Storage requires the physical migration and movement of data from one data center to another data center which has their own time and cost associated with it.

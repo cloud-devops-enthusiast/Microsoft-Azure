@@ -36,6 +36,10 @@ So, there are certain things which you need to have in place for consideration:
 
 - *Consider Data Accessibility:* Azure storage allows you to access data from anywhere in the world over the internet using HTTP or HTTPS. You can also access the data stored into Azure Storage using the Azure Portal, Azure CLI, Azure PowerShell, Azure Storage Explorer, Azure Storage Client Libraries, Azure REST API and Azure Storage REST API.
 
+- *Consider Storage Optimization for Massive Data:* Azure blob storage is optimized for storing massive amounts of unstructured data. Objects in the Azure Blob can be accessed from anywhere in the world using the HTTP or HTTPS.
+
+- *Consider Storage for Messages:* Azure Queue Storage is a perfect fit for storing the messages which are in large size. Azure Queue Storage is mostly used to store and create a queue to process assynchronous messages.
+
 **Azure Storage Services**
 
 *Azure Blob Storage*
@@ -52,4 +56,30 @@ Azure Blob Storage is a service that allows the users to access the objects usin
 
 *Azure Files*
 
-Azure Files is a cloud storage service provided by Microsoft Azure which allows you to setup a highly available network file share. These file shares can be accessed using the Server Message Block (SMB) protocol or by using the Network File Shares (NFS) protocol. Here Multiple services can share the same file shares at the same time both with read and write access. Azure files can be accessed by using the Azure REST interface and or using the azure storage client libraries.
+Azure Files is a cloud storage service provided by Microsoft Azure which allows you to setup a highly available network file share. These file shares can be accessed using the Server Message Block (SMB) protocol or by using the Network File Shares (NFS) protocol. Here Multiple services can share the same file shares at the same time both with read and write access. Azure files can be accessed by using the Azure REST interface and or using the azure storage client libraries. Azure files is a perfect fit for following scenarios:
+
+- While migrating to cloud, you can make use of azure files as being on-premises application mostly make use of the file shares. If you mount the same drive letter to attach azure file shares to your applications then there will be minimum efforts required to migrate the application to cloud.
+
+- The configuration files can be stored and easily shared between multiple Virtual Machines. Tools and utilities which are used by multiple developers can be stored here in a certain location and can be accessed by multiple developers. Also you can keep all the dependencies of your application in a single location and can be accessed by multiple developers.
+
+- Multiple kind of logs like the diagnostic logs, metrics, and crash dumps can be stored down here so they can be accessed by multiple developers and can be used for analysis.
+
+Here the storage account credentials are used to authenticate for accessing the Azure Files, but the users must have the access to the file share. 
+
+*Azure Queue Storage*
+
+Azure Queue Storage is a cloud storage offering by Microsoft Azure which is mostly used to store the messages which are larger in size. Azure queue is a perfect fit for a scenario where you need to store the messages which are sent and received in queue format. Queue messages can be up to 64kb in size and can be stored in a queue which can store multiple messages in once. Queues can be used to store the messages which are used for communication between the components of an application.
+
+In simple terms you can say it as a queue of messages which are stored in a queue and can be accessed by services or developers.Consider a scenario like changing a profile picture where you upload your picture and it is stored in a queue and then it is processed by the service which is responsible for changing the profile picture. This is a perfect fit for scenarios where you need to store the messages which are used for communication between the components of an application. Each part of the queue can be scaled separately based on the requirement, which gives you more control over the configuration.
+
+*Azure Table Storage(Azure Cosmos DB)*
+
+Azure Table Storage is a cloud storage service to have a fully managed NoSQL database. As table storage is schemaless, it is easy to adapt to the changing data requirements. Azure Table Storage is a perfect fit for following scenarios:
+
+- Storing TBs of the structured data which are capable of the scaling web applications
+- Storing the datasets which doesn't require complex joins, foreign keys, or stored procedures and can be denormalized for fast access.
+- Quickly querying the data using a clustered index.
+- Accessing the data using the OData protocol and LINQ queries with WCF Data Service .NET Libraries.
+
+This also allow it to handle the capacity management with cost effectively serverless and autoscaling options for the applications which are used for the internet of things (IoT) and other applications which are used for the web.
+

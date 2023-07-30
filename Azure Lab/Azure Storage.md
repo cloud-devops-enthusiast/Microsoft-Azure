@@ -40,6 +40,81 @@ So, there are certain things which you need to have in place for consideration:
 
 - *Consider Storage for Messages:* Azure Queue Storage is a perfect fit for storing the messages which are in large size. Azure Queue Storage is mostly used to store and create a queue to process assynchronous messages.
 
+**Creating Azure Storage Account**
+
+1.1. Login to Azure Portal using the credentials and Search for Azure Storage in the search bar. Choose Azure Storage from the search results. Choose add to add a new storage account.
+
+![Image 1.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/21fe58e3c8bd9d1fa3765ea456cfd330b7279cc8/Images/Screenshot%202023-07-30%20190304.png)
+
+1.2. In this basic section of creating a Storage account, enter the details like:
+
+For the project details,
+    Subscription: Choose the subscription from the drop down menu.
+    Resource Group: Choose the resource group from the drop down menu or create a new one.
+For Instance details,
+    Storage account name: Enter the name of the storage account. This is required to be unique across the Azure.
+    Region: Choose the region from the drop down menu and choose the location where you want to deploy the storage account.
+    Performance: Choose the performance from the drop down menu. This is the type of storage account you want to create.
+    Redundancy: Choose the redundancy from the drop down menu. This is the type of redundancy you want to have for your storage account like LRS, GRS, ZRS or GZRS.
+
+![Image 1.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/57c17940bad997247720bf5415849ee78b1682dd/Images/portal.azure.com__pwa%3D11.png)
+
+1.3. In the advanced section of creating a Storage account, enter the details like:
+
+For the Security settings you need to enter the details like,
+    Under this option you have configuration for Secure transfer required, HTTPs only and Encryption. Setting the TLS version and Permitted scope for copy operations.
+    Enabling the Hierarchical Namespace for the Azure Data Lake Storage Gen2.
+    Enabling the Access Protocols which enable SFTP and NFS.
+    Enabling the Blob Storage setting and setting the access tier of the blob storage.
+    Enabling the Azure Files setting which allows you to share large size file shares.
+
+![Image 1.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/a2a1ee0bc322bf8b9fc36ba23b286f472e34311c/Images/portal.azure.com__pwa%3D12.png)
+
+1.4. In the networking section of creating a Storage account, enter the details like:
+
+For setting up network connectivity,
+    Choosing the network connectivity method like selecting the public access or disabling the public access.
+For setting up Virtual networks,
+    Choosing the subscription, Virtual network and subnet from the drop down menu. Here we are creating new subnet and virtual network.
+For setting up Network routing,
+    Under this you can give the routing preference between Microsoft network routing and Internet routing. Here we will be going with Microsoft Network Routing.
+
+![Image 1.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/bee3c28d0ac375fbd41c413e39e808e033835316/Images/portal.azure.com__pwa%3D1%20(2).png)
+
+1.5. In the data protection section of creating a Storage account, enter the details like:
+
+For setting up Recovery Services,
+    Enabling the soft delete options for various services like Blob, File Share, Table and Queue.
+For setting up Tracking,
+    Enabling versioning, Blob change feed options.
+For Access Control,
+    Enabling the version level immutability support.
+
+![Image 1.5](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/74c2e29e57b4b4e6f812f45927e6817c0bf2b598/Images/portal.azure.com__pwa%3D1%20(3).png)
+
+1.6. In the Encryption section of creating a Storage account, enter the details like:
+
+For setting up the encryption type, with options of Microsoft managed keys and Customer managed keys.
+For setting up the customer managed keys, you need to create a key vault and key for the same. Enabling the infrastructure encryption.
+
+![Image 1.6](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/6a4a1e54a227b6b4e761ffd19297dc15488ba71b/Images/portal.azure.com__pwa%3D1%20(4).png)
+
+1.7. In the Tags section of creating a Storage account, enter the tags which you want place with your storage account deployment.
+
+![Image 1.7](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/de56fc6305dce6779d51e7d02c92a7929cf85145/Images/portal.azure.com__pwa%3D1%20(5).png)
+
+1.8. In the Review + Create section of creating a Storage account, review the details and click on Create to create the storage account.
+
+![Image 1.8](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/2389fab75cbe8888e06873b687bf73563865e89f/Images/portal.azure.com__pwa%3D1%20(6).png)
+
+1.9. Once the deployment is completed, you will see the notification on the top right corner of the screen. Click on Go to resource to go to the storage account.
+
+![Image 1.9](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/e4ddd38548da1dd7da91c510cc87f142a5ef6fa3/Images/Screenshot%202023-07-30%20220237.png)
+
+1.10. Once you click on Go to resource, you will be redirected to the storage account page. Here you can see the overview of the storage account.
+
+![Image 1.10](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/c0cdddf4dbfbd8ed4b55044feeb7af8d5f5c1dea/Images/portal.azure.com__pwa%3D1%20(7).png)
+
 **Azure Storage Services**
 
 *Azure Blob Storage*
@@ -98,3 +173,68 @@ Replication is a process of copying the data from one location to another locati
 
     - Zone Redundant Storage is not available in all of the regions.
     - Switching to Zone Redundant Storage from Local Redundant Storage requires the physical migration and movement of data from one data center to another data center which has their own time and cost associated with it.
+
+- *Geo-Redundant Storage (GRS):* In this process of replication the data is replicated to the secondary region which is much away from the primary region like 100's of miles away. This is the more effective way of saving your data to an another location, making the data available in case of any regional outages like natural disasters or data center failures. GRS is designed in such a way that it can provide the maximum durability for your data. GRS is a perfect fit for the conditions or scenarios which are mentioned below:
+
+    - You've a critical data which is required to be backed up and needed to be available in case of any disaster.
+    - Your data governance policies require you have to store the data in the multiple data centers.
+    - You want to have your data with maximum durability.
+
+  GRS comes with two certain options from which you can choose based on your requirement:
+
+    - GRS: In this option the data is replicated to the secondary region which is much away from the primary region. In such condition the access to secondary region is only available when primary region is unavailable which is also done by Microsoft as a part of failover process.
+
+    - Read-access geo-redundant storage (RA-GRS): This option allows you to have read access to the secondary region even when the primary region is up and available. This option also replicates the data similar to the GRS option while also giving you the read access to the secondary region regardless of the primary region failover or downtime.
+
+  The whole process happens like when you start the replication, it makes a replication using the LRS option and then it updates the data to the primary location using the LRS. Then the update is synchronously pushed to the secondary region using the GRS option. This process is done in such a way that it doesn't affect the performance of the application.The process of LRS happens again at the end of the secondary region to manage the replicas of the data.
+
+- *Geo-Zone Redundant Storage:* This is the combination of the GRS and ZRS. In this process the data is replicated to the secondary regions which are much away from the primary region and also the data is replicated to the secondary zones which are situated in the same region. Which means the data is replicated to all the three availability zones of primary region and also to the secondary region. Here Every region is paired with the another region with the same region pair. With a GZRS account you can continue to read or write a data even if the primary region is unavailable. This is the most expensive option available for the replication of the data. In case your primary region is completely destroyed or gone in case of any natural disaster the data will be available in the secondary region and also recoverable.
+
+   GZRS is designed in such a way that it can provide the maximum durability of data at 99.99999999999999% (16 9's) of the durability of the data in the given year. GZRS has a scalability target same as the LRS, ZRS, GRS or RA-GRS. Here you can additionaly enable the read access for the secondary region in the same way as you do in the GRS option.
+
+**Accessing Azure Storage**
+
+Every Azure Storage object comes with a unique address which is used to acces that object. Here the storage account name is used as the subdomain name for the storage account. The combination of this with the with the primary domain name of the azure storage which is specific to the azure service with which it is binded with. This whole combination forms an endpoint for your storage account. The endpoint for the storage account is in the following format:
+
+- *Container Service:* //mystorageaccount.blob.core.windows.net
+- *Table Storage:* //mystorageaccount.table.core.windows.net
+- *Queue Storage:* //mystorageaccount.queue.core.windows.net
+- *File Storage:* //mystorageaccount.file.core.windows.net
+
+You can also customize the domain names for the Azure Storage Accounts which will look like \<storage-account-name>.blob.core.windows.net, for which there two ways you can do it:
+
+- Direct Mapping: In this process you can map the custom domain for the subdomain with your azure storage account. For this you need to create a CNAME record in your DNS zone file which will point to the default domain name of the storage account. This process is also known as the direct mapping of the custom domain name.
+
+- Intermediate Mapping: In this process, the domain is already mapped to the intermediate domain which is already mapped to the default domain name of the storage account. This process is also known as the intermediate mapping of the custom domain name.
+
+**Uploading and Accessing an Object to Azure Storage**
+
+2.1. Uploading file to blob and creating a blob as there is no blog available to upload the files.
+
+![image 2.1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/9beb83ffd39c06f71a0d5f1b5d03c3bfa55a702b/Images/Screenshot%202023-07-30%20221616.png)
+
+2.2. Creating a new container to store the files.
+
+{IMP} You need to check the role assignments, as if you don't have right role assignments you wouldn't be able to do any operations on the storage account. You need to have the role assignments of the storage account as the owner or the contributor to perform any operations on the storage account.
+
+![image 2.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/6b5378de1eed3d7a29d19e48b40213316c8f1ca6/Images/Screenshot%202023-07-30%20221855.png)
+
+2.3. Go to your created container and upload the file. Select the file and click on upload.
+
+![image 2.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/35be1f5c32c04c5efda3ebe48f2643ce114df2e6/Images/Screenshot%202023-07-30%20223047.png)
+
+2.4. Click on the upload button and select the file to upload.
+
+![image 2.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/7ad5f2e95276d3b16e795e92aa636b217484c796/Images/Screenshot%202023-07-30%20223205.png)
+
+2.5. You can access this file from anywhere using the endpoint of the storage account. You can get the url to the uploaded image and access it from anywhere.
+
+![image 2.5](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/b52e68c3758b8f3f0a5bc8923b89ccb0a4c13425/Images/Screenshot%202023-07-30%20223647.png)
+
+2.6. Accessing the file in incognito mode as the file is public.
+
+![image 2.6](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/ff9c1466ccebe44aaeb0410bff746cce1d801886/Images/Screenshot%202023-07-30%20223837.png)
+
+2.8. Original Uploaded File:
+
+https://myazureblogs.blob.core.windows.net/myblob/catscafe-penguin.gif

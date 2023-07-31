@@ -2,7 +2,7 @@
 
 Azure Storage is a cloud storage solution service which is used to implement the mordern day data storage solutions. Azure Storage provides multiple options for storing various types of data in the cloud. When you think about cloud, it is all about storing data in a remote location and accessing it from anywhere in the world. 
 
-In this blog, I will be discussing about the 
+In this blog, I will be discussing about following topics:
 
 - Azure Storage
 - Storage Accounts

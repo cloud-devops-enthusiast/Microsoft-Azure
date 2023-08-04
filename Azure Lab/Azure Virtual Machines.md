@@ -12,7 +12,9 @@ Azure Virtual Machines can be used for many purposes like:
 
 - Migration of Applications: You can migrate your existing on-premises virtual machines using Azure Migrate service which allows you to have a seamless migration of your virtual machines to the cloud. Migration of virtual machines to the cloud allows you to have a cost effective and scalable solution.
 
-- Web Hosting and Web Apps: Azure VMs can be used for hosting wesites and webapps which can be accessed from anywhere while providing granular control over the VMs and the resources used by them
+- Web Hosting and Web Apps: Azure VMs can be used for hosting wesites and webapps which can be accessed from anywhere while providing granular control over the VMs and the resources used by them. Even if you host your website on Azure VMs, it will be less expensive then the traditional hosting services.
+
+- Considering Storage, Backup and Recovery: When you think about your virtual machines you need to think also about the resources connected with them, out of which Storage is one of the most important part of the VMs. 
 
 There are many such more uses for multiple purposes based on your needs and requirements.
 

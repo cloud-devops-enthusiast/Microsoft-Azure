@@ -14,9 +14,22 @@ Azure Virtual Machines can be used for many purposes like:
 
 - Web Hosting and Web Apps: Azure VMs can be used for hosting wesites and webapps which can be accessed from anywhere while providing granular control over the VMs and the resources used by them. Even if you host your website on Azure VMs, it will be less expensive then the traditional hosting services.
 
-- Considering Storage, Backup and Recovery: When you think about your virtual machines you need to think also about the resources connected with them, out of which Storage is one of the most important part of the VMs. 
+- Considering Storage, Backup and Recovery: When you think about your virtual machines you need to think also about the resources connected with them, out of which Storage is one of the most important part of the VMs. Azure VMs provides you with these options of Backup and Restoration of Storages while keeping the legal and compliance requirements in mind. Azure VMs which is an IaaS service offering from Azure, which provides you with the flexibility to add or remove the storage as per your needs and requirements and you only need to pay for the storage you use, this plays a major role in unpredictable demands of the business and the applications.
+
+- Consider High-Performance Computing: Azure Virtual Machines support the High Performance computing by providing the VMs with high performance processors and GPUs. This allows you to run the applications which requires high performance computing like Machine Learning, Artificial Intelligence, etc.
+
+- Consider Big data and Analytics: Azure VMs can also be used for the Big data and Analytics purposes. In this scenario, you can use it for massive data sets and run the analytics on them. Mining of data sets can be done using Azure VMs. 
+
+- Considering Extended Datacenters: Azure VMs can be used for extending your on-premise datacenters to the Cloud. This also allows you to physically add the hardware to the VM and use it as per your needs and requirements. This also has the advantage of cost effectiveness and scalability. This also allows you to have a hybrid cloud solution and have to connect your physical network to the cloud network.
 
 There are many such more uses for multiple purposes based on your needs and requirements.
 
 **With Great Power, Comes Great Responsibility too**, There are some things which you need to keep in mind while using Azure VMs:
 
+**Virtual Machine Configuration**
+
+*Network Configuration of VMs*
+
+Azure VMs can be configured with Virtual Networks which allows you to connect your VMs to make connection with other Azure Services and On-Premise Networks. Virtual Networks acts as an enclosed system which does not allows the traffic to go out of the network and does not allow you to access anything out of the network. This is enabled by default when you create a VM, this is because of the security reasons. You can also configure the VMs to allow the traffic to go out of the network and allow the traffic to come in the network. This can be done by configuring the Network Security Groups which also includes the on-premise networks. Network addresses and subnets can be configured for the VMs as well. It is important to make plans for the network configuration of your VMs before you create them as it plays a major role in the security of your VMs.
+
+*Naming Conventions*

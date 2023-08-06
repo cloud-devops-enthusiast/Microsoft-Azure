@@ -33,3 +33,13 @@ There are many such more uses for multiple purposes based on your needs and requ
 Azure VMs can be configured with Virtual Networks which allows you to connect your VMs to make connection with other Azure Services and On-Premise Networks. Virtual Networks acts as an enclosed system which does not allows the traffic to go out of the network and does not allow you to access anything out of the network. This is enabled by default when you create a VM, this is because of the security reasons. You can also configure the VMs to allow the traffic to go out of the network and allow the traffic to come in the network. This can be done by configuring the Network Security Groups which also includes the on-premise networks. Network addresses and subnets can be configured for the VMs as well. It is important to make plans for the network configuration of your VMs before you create them as it plays a major role in the security of your VMs.
 
 *Naming Conventions*
+
+Naming Convention is an important part of the VMs as it helps you to identify the VMs and the resources connected with them. The virtual machine name is the same as computer name and is used to identify the VMs. You can name a virtual machine with a maximum of 15 characters on a windows VM and upto 64 characters on a Linux VM.
+
+Virtual machine name should define what they are being used for, as well as it should consist of other attributes as well.
+
+- If you are using the VMs for environment like development (dev), testing (QA), production (prod), etc then you can add these attributes to the name of the VMs.
+
+- If you are using the VMs at a specific location due to some data compliance or legal requirements then you can add the location attribute to the name of the VMs like uw(US West), je (Japan East), ne (North Europe), etc.
+
+- If there are multiple number of VMs 

@@ -42,4 +42,31 @@ Virtual machine name should define what they are being used for, as well as it s
 
 - If you are using the VMs at a specific location due to some data compliance or legal requirements then you can add the location attribute to the name of the VMs like uw(US West), je (Japan East), ne (North Europe), etc.
 
-- If there are multiple number of VMs 
+- If there are multiple number of VMs which has similar names, then you can include this instance number into it like VM1, VM2, VM3, etc which makes it easy to identify the VMs.
+
+- If you are using the VMs for a specific purpose like for a product or service then you can include the name of the product or service in the name of the VMs. This will help you to identify the VMs easily.
+
+- If you are using the VMs for a specific roles like web server, security firewall or messaging server then you can include the role of the VMs in the name of the VMs. This will help you to identify the VMs easily.
+
+For example if you name a VM as *dev-usc-webvm01* then it means that it is a development VM which is located in US Central Region and is a web server with instance number 01.
+
+*Virtual Machine Location*
+
+Azure VMs can be created in any of the Azure Regions, These Regions have Datacenters with all of the services are always ready to serve you with the services. You can choose the region based on your needs and requirements. 
+
+You can also choose the region based on the legal or compliance requirements by your organization, here you can think like that too as your users are located in a specific region so you just create the resources in that region only. This will help you to reduce the latency and increase the performance of the application.
+
+There are some things which you need to be kept in mind while considering the location of the VMs:
+
+- The machine location decides the limits of your available options. Each region has a totally different set of options available to you. So keep this in mind all the configurations are not available in all the regions.
+
+- There is a cost difference between the regions, so you need to keep this in your mind while choosing the region for your VMs. Try to checkout the configurations and the cost of the VMs in different regions and then choose the region which is best for you.
+
+*Virtual Machine Size*
+
+Azure VMs comes in different sizes and configuration, just like clothes comes in different sizes. You can choose the size of the VMs based on your needs and requirements. There are six different categories in which the VMs are divided:
+
+- General Purpose: These VMs are used for the general purpose computing and comes with balanced CPU-to-memory ratio. These VMs are an ideal choice for testing and development purpose, small to medium databases and a low to medium traffic web servers.
+
+- Compute Optimized: This kind of VMs are used for the workloads which requires high performance processors. These VMs are an ideal choice for the medium traffic web servers, network appliances, batch processes and application servers.
+

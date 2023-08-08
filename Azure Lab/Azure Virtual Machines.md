@@ -70,3 +70,6 @@ Azure VMs comes in different sizes and configuration, just like clothes comes in
 
 - Compute Optimized: This kind of VMs are used for the workloads which requires high performance processors. These VMs are an ideal choice for the medium traffic web servers, network appliances, batch processes and application servers.
 
+- Memory Optimized: These VMs are used for the workloads which requires high memory to CPU ratio. These VMs are an ideal choice for the relational database servers, medium to large caches and in-memory analytics.
+
+- Storage Optimized: These VMs are used for the workloads which requires high disk throughput and IO. These VMs are the perfect choice for Big Data, SQL, NO SQL databases, Data Warehousing and large transactional databases.

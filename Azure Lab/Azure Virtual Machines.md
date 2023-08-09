@@ -73,3 +73,24 @@ Azure VMs comes in different sizes and configuration, just like clothes comes in
 - Memory Optimized: These VMs are used for the workloads which requires high memory to CPU ratio. These VMs are an ideal choice for the relational database servers, medium to large caches and in-memory analytics.
 
 - Storage Optimized: These VMs are used for the workloads which requires high disk throughput and IO. These VMs are the perfect choice for Big Data, SQL, NO SQL databases, Data Warehousing and large transactional databases.
+
+- GPU: These VMs are used for the workloads which has graphic intense applications like rendering and video editing and also the compute intensive applications like Machine Learning, Artificial Intelligence, etc. This service is available with single or multiple GPUs.
+
+- High Performance Compute: These VMs are used for the workloads which requires the fastest and most powerful processors. These VMs are an ideal choice for modelling and simulating the complex systems, high performance computing (HPC) and analytics.
+
+*Azure Storage*
+
+As discussed in my previous blog, Here Azure Managed Disk does all the work for you in backend and you don't need to worry about the storage of the VMs. You just need to specify the disk size and the performance you need out of your VMs.
+
+*Pricing in Virtual Machines*
+
+Here the subscription bills every Virtual machine in two parts: One is the Cost of the Compute Service and Second is the Cost of the Storage. Here this seperation help you in figuring out which is costing more and so you can scale up or down based on your needs.
+
+- Compute Expenses: This is the cost of the VMs which is based on the size of the VMs and the time for which it is running. This is calculated on the basis of the number of cores, memory and the duration for which the VMs are running. This is calculated on the basis of per minute basis. There are two options for the payment of the compute expenses:
+
+  - Pay as you go or Consumption based: Under this option you need to pay for the compute resoources you use and you can shut down the VMs when not in use to save the cost. This is the best option for the unpredictable workloads where you can increase or decrease the amount of resources you need. This is also the best option for the workloads which are not running 24/7.
+
+  - Reserved Instances: This option allows you to reserve the VMs for a specific period of time like one or three years in a specific region based on your choice and need. The commitment is made in upfront and The Reserved Instances can save a lot like upto 72% of the cost of the VMs. This is the best option for the workloads which are running 24/7.
+
+- Storage Expenses: These expenses are charged totally separately from the compute expenses. These expenses are based on the azure storage used by the disks for storing the data.
+

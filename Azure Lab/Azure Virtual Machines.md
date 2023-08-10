@@ -78,6 +78,8 @@ Azure VMs comes in different sizes and configuration, just like clothes comes in
 
 - High Performance Compute: These VMs are used for the workloads which requires the fastest and most powerful processors. These VMs are an ideal choice for modelling and simulating the complex systems, high performance computing (HPC) and analytics.
 
+After knowing a lot about the VMs size, lets think about a scenario where you want to add more cores or memory to your existing VM or you want to reduce the cores or memory of your existing VM. Here you can do this by resizing your VMs. This option gives you full control with the flexibility and elastic approach to your VMs.
+
 *Azure Storage*
 
 As discussed in my previous blog, Here Azure Managed Disk does all the work for you in backend and you don't need to worry about the storage of the VMs. You just need to specify the disk size and the performance you need out of your VMs.
@@ -93,4 +95,8 @@ Here the subscription bills every Virtual machine in two parts: One is the Cost 
   - Reserved Instances: This option allows you to reserve the VMs for a specific period of time like one or three years in a specific region based on your choice and need. The commitment is made in upfront and The Reserved Instances can save a lot like upto 72% of the cost of the VMs. This is the best option for the workloads which are running 24/7.
 
 - Storage Expenses: These expenses are charged totally separately from the compute expenses. These expenses are based on the azure storage used by the disks for storing the data.
+
+*Operating System*
+
+Azure VMs supports multiple operating system imgaes which you can install onto your VMs. If you need more than the base layer operating system, then you can search from Azure Marketplace for the images which are available for the operating system you need. Azure Marketplace also provides you with the images for the operating system which are preconfigured with the applications like SQL Server, Oracle, etc, this helps you a lot in saving the time and efforts in installing and configuring the applications. If you're not able to find the operating system of your choice then you can also upload your own custom image, and use it to create the VMs. Here you need to keep a check of the operating system you are choosing should be 64- bit operating system as Azure VMs does not support 32-bit operating system.
 

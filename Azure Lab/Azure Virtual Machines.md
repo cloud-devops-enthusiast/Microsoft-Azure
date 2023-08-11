@@ -98,5 +98,26 @@ Here the subscription bills every Virtual machine in two parts: One is the Cost 
 
 *Operating System*
 
-Azure VMs supports multiple operating system imgaes which you can install onto your VMs. If you need more than the base layer operating system, then you can search from Azure Marketplace for the images which are available for the operating system you need. Azure Marketplace also provides you with the images for the operating system which are preconfigured with the applications like SQL Server, Oracle, etc, this helps you a lot in saving the time and efforts in installing and configuring the applications. If you're not able to find the operating system of your choice then you can also upload your own custom image, and use it to create the VMs. Here you need to keep a check of the operating system you are choosing should be 64- bit operating system as Azure VMs does not support 32-bit operating system.
+Azure VMs supports multiple operating system imgaes which you can install onto your VMs. If you need more than the base layer operating system, then you can search from Azure Marketplace for the images which are available for the operating system you need. Azure Marketplace also provides you with the images for the operating system which are preconfigured with the applications like SQL Server, Oracle, etc, this helps you a lot in saving the time and efforts in installing and configuring the applications. 
 
+If you're not able to find the operating system of your choice then you can also upload your own custom image, and use it to create the VMs. Here you need to keep a check of the operating system you are choosing should be 64- bit operating system as Azure VMs does not support 32-bit operating system.
+
+**Connecting a Azure Virtual Machine**
+
+There are multiple ways by which you can connect to your Azure VMs:
+
+- Remote Desktop Protocol (RDP): This is the most common way of connecting to the Azure VMs. This is the same way by which you connect to your on-premise servers. This is the best way to connect to the Windows VMs.
+
+- Connect using SSH: This is the most common way of connecting to the Azure VMs. This is the same way by which you connect to your on-premise servers. This is the best way to connect to the Linux VMs.
+
+- Bastion: This is a new service provided by Azure which allows you to connect to the Azure VMs through the Azure Portal. This is the best way to connect to the Azure VMs if you don't want to use the RDP or SSH. 
+
+- Azure Cloud Shell: This is a new service provided by Azure which allows you to connect to the Azure VMs through the Azure Portal. This is the best way to connect to the Azure VMs if you don't want to use the RDP or SSH. This is a browser based shell experience which allows you to manage your Azure resources from anywhere using a browser.
+
+**Azure Virtual Machine Availability**
+
+You should always keep in mind about the worst case scenario and you should always plan for it. So you need to plan for the unplanned downtime of your VMs and the applications running on them. This planning includes the unplanned hardware maintenance, unexpected downtime of the VMs, or any other planned or unplanned event which can cause the downtime of the VMs.
+
+- An unplanned hardware maintenance can be caused due to the hardware failures or any other hardware related issues like the system predicts about certain hardware which is about to fail and so it needs to be replaced. As there is no other option for this, the VMs needs to be shifted to healthy hardware so that the VMs can be up and running again. Here the Azure Live Migration runs in the background for reducing the downtime. For during this kind of operations Azure VMs can be down for a short duration of time but the performance of the VMs might be degraded. 
+
+- An unexpected downtime

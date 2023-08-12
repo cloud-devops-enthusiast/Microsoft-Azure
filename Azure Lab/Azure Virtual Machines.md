@@ -84,6 +84,21 @@ After knowing a lot about the VMs size, lets think about a scenario where you wa
 
 As discussed in my previous blog, Here Azure Managed Disk does all the work for you in backend and you don't need to worry about the storage of the VMs. You just need to specify the disk size and the performance you need out of your VMs.
 
+When you create a vitual machine you have at least 2 disks attached to it, one is the OS disk and the other is the temporary disk. Virtual machines can have one or more disks in place for storing the data based on the needs and requirements. These disks can be attached or detached from the VMs as per the needs and requirements. These disks can be of two types:
+
+- Temporary Disks: These disks are used for storing the temporary data like page or swap files. These disks are not persistent and the data stored on these disks will be lost when the VMs are shut down or restarted. These disks are not charged separately and are included in the cost of the VMs. On the Windows virtual machine these temporary disks are labelled as D: and on the Linux virtual machine these temporary disks are labelled as /dev/sdb. On Linux, the disk can be formatted and mounted as a file system at /mnt by the azure linux agent.
+
+- Data Disks: These disks are used for storing the data which makes it a persistent disks and the data stored on these disks will not be lost when the VMs are shut down or restarted. These disks are registered as SCSI drives and are labeled with the letter you assign when you attach the disk to the VM. These disks are charged separately and are not included in the cost of the VMs.
+
+
+Considerations for Azure Storage:
+
+- Consider Azure Premium Storage: Azure premium storage is about gaining high performance, low-latency disk to gain higher IOPS and throughput. Virtual machine disks uses the SSDs for the storage of the data behind the scenes. If you don't have any specific requirements for the storage then you can use the standard storage which is the default storage for the VMs or If you have existing virtual machines in place and want a performance boost then you can upgrade the storage to the premium storage and migrate your data to the premium storage. Just keep in mind that you can't downgrade the storage from premium to standard and it will also increase the cost at the time of billing.
+
+
+- Consider Multiple Storage Disks:
+
+
 *Pricing in Virtual Machines*
 
 Here the subscription bills every Virtual machine in two parts: One is the Cost of the Compute Service and Second is the Cost of the Storage. Here this seperation help you in figuring out which is costing more and so you can scale up or down based on your needs.
@@ -120,4 +135,6 @@ You should always keep in mind about the worst case scenario and you should alwa
 
 - An unplanned hardware maintenance can be caused due to the hardware failures or any other hardware related issues like the system predicts about certain hardware which is about to fail and so it needs to be replaced. As there is no other option for this, the VMs needs to be shifted to healthy hardware so that the VMs can be up and running again. Here the Azure Live Migration runs in the background for reducing the downtime. For during this kind of operations Azure VMs can be down for a short duration of time but the performance of the VMs might be degraded. 
 
-- An unexpected downtime
+- An unexpected downtime of the VMs can be caused due to the hardware and physical infrastructure failures. Such failures consists of the local network failures, local disk failures or other kind of failures. When these kind of failures are detected, Azure automatically moves the VMs to a healthy physical machine. During this process of healing the VMs, the VMs can be down for a short duration of time, sometimes in some situations there is a loss of the temporary disk data.
+
+- A planned downtime of the VMs can be made by Microsoft Azure for the maintenance of the Azure Infrastructure to improve the overall reliability and performance of the Azure Infrastructure. This kind of downtime is very rare and is done only when it is required. This kind of downtime is done in a planned manner and is done in a way that it does not affect the availability of the VMs.

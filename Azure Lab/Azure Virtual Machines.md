@@ -90,14 +90,15 @@ When you create a vitual machine you have at least 2 disks attached to it, one i
 
 - Data Disks: These disks are used for storing the data which makes it a persistent disks and the data stored on these disks will not be lost when the VMs are shut down or restarted. These disks are registered as SCSI drives and are labeled with the letter you assign when you attach the disk to the VM. These disks are charged separately and are not included in the cost of the VMs.
 
-
 Considerations for Azure Storage:
 
 - Consider Azure Premium Storage: Azure premium storage is about gaining high performance, low-latency disk to gain higher IOPS and throughput. Virtual machine disks uses the SSDs for the storage of the data behind the scenes. If you don't have any specific requirements for the storage then you can use the standard storage which is the default storage for the VMs or If you have existing virtual machines in place and want a performance boost then you can upgrade the storage to the premium storage and migrate your data to the premium storage. Just keep in mind that you can't downgrade the storage from premium to standard and it will also increase the cost at the time of billing.
 
+- Consider Multiple Storage Disks: In Azure you can attach several premium disks to a virtual machine and upto 256 TB of storage can be attached to a virtual machine. This allows your applications to achieve 80000 IOPS per virtual machine and 2000 MB per second disk throughput per virtual machine. This also allows you to have a high availability and scalability of your applications. The read operations with premium storage have a lower latency than the write operations. So if you have a read intensive application then you can use the premium storage for the read intensive operations and standard storage for the write intensive operations.
 
-- Consider Multiple Storage Disks:
+- Consider Azure Managed Disks: An azure managed disk is a VHD. Azure managed disks are the best option for the storage of the VMs as it does all the work for you in the backend and you don't need to worry about the storage of the VMs. When you provision the managed disk, Azure takes care of the rest. There available types of disks are Ultra Solid State Drives(SSDs), Premium SSD, Standard SSD and Standard hard disk drives(HDD).
 
+- Consider Migrating to Premium Storage: If you have your existing applications running on the standard storage and migrate them to the premium storage that requires very high IOPS to run the applications. This will help you to increase the performance of the applications and also the cost will be increased at the time of billing.
 
 *Pricing in Virtual Machines*
 
@@ -138,3 +139,27 @@ You should always keep in mind about the worst case scenario and you should alwa
 - An unexpected downtime of the VMs can be caused due to the hardware and physical infrastructure failures. Such failures consists of the local network failures, local disk failures or other kind of failures. When these kind of failures are detected, Azure automatically moves the VMs to a healthy physical machine. During this process of healing the VMs, the VMs can be down for a short duration of time, sometimes in some situations there is a loss of the temporary disk data.
 
 - A planned downtime of the VMs can be made by Microsoft Azure for the maintenance of the Azure Infrastructure to improve the overall reliability and performance of the Azure Infrastructure. This kind of downtime is very rare and is done only when it is required. This kind of downtime is done in a planned manner and is done in a way that it does not affect the availability of the VMs.
+
+**Availability Sets**
+
+Availability set is logical grouping of the VMs which is used for the high availability of the VMs. This feature helps in keeping the VMs up at the time when even a single point in the VM gets down due to any reason it will not be impacting any other VMs in the availability set. The grouping ensures that the all the VMs in the availability set are not updated or rebooted at the same time.
+
+Characteristics of Availability Sets:
+
+- All virtual machines of the same availability set should be in the same region and same subscription, should have the same softwares installed in place and should be performing the similar or identical set of functionalities.
+
+- Azure ensures that the virtual machines from a single availability set are placed in different sevrer racks, storage units and network switches. This ensures that if any of the hardware fails then it will not affect the other VMs in the availability set and If it fails then the availability set would still be available and will be serving the customers.
+
+- Azure allows you to create a virtual machine and availability set at the same time. You can also add an existing virtual machine to an availability set but if you have your VM in one of the availability set then you can't move it to another availability set and if you want to do so then you need to delete the VM and recreate it in the new availability set.
+
+- You can create availability set using Azure Portal, Azure Resource Manager Templates, scripting and API tools.
+
+Things to keep in mind while creating an Availability Set:
+
+- Considering the redundancy: To attain the high availability of the VMs, place you VM in an availability set.
+
+- Considering seperation of application tiers: Each application tiers should be placed in a seperate availability set. This will ensure that the VMs are not affected by the single point of failure. This will also ensure that your VMs are not updated or rebooted at the same time.
+
+- Consider load balancing: For the high availability and network performance of the VMs, you should create a load balanced availability set. Load balancer distributes the network traffic between the VMs in the availability set using Azure Load balancer across multiple VMs in the availability set.
+
+- Consider Managed Disks: You can make use of the Azure managed disks with your azure virtual machines across the availability sets for the block level storage.

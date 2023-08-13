@@ -122,6 +122,8 @@ If you're not able to find the operating system of your choice then you can also
 
 There are multiple ways by which you can connect to your Azure VMs:
 
+![Image 1](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/b33011b380d4b39bb4ab5c2e4ea9489f081864f3/Images/bastion-connections-29c60c68.png)
+
 - Remote Desktop Protocol (RDP): This is the most common way of connecting to the Azure VMs. This is the same way by which you connect to your on-premise servers. This is the best way to connect to the Windows VMs.
 
 - Connect using SSH: This is the most common way of connecting to the Azure VMs. This is the same way by which you connect to your on-premise servers. This is the best way to connect to the Linux VMs.
@@ -163,3 +165,12 @@ Things to keep in mind while creating an Availability Set:
 - Consider load balancing: For the high availability and network performance of the VMs, you should create a load balanced availability set. Load balancer distributes the network traffic between the VMs in the availability set using Azure Load balancer across multiple VMs in the availability set.
 
 - Consider Managed Disks: You can make use of the Azure managed disks with your azure virtual machines across the availability sets for the block level storage.
+
+**Update Domains and Fault Domains**
+
+These are the two backbone concepts behind the high availability and fault tolerance of the Azure VMs, First is *Update Domain* and another one is *Fault Domain*.
+
+*Update Domain*
+
+
+*Fault Domain*

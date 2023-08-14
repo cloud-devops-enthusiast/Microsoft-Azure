@@ -172,5 +172,6 @@ These are the two backbone concepts behind the high availability and fault toler
 
 *Update Domain*
 
+An update domain is a logical group of the VMs which are used in the process of updating the Azure Infrastructure. Using an update domain, you can allow azure to have incremental or rolling upgrades across a deployment.
 
 *Fault Domain*

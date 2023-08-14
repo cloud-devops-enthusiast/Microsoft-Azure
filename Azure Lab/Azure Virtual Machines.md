@@ -174,4 +174,22 @@ These are the two backbone concepts behind the high availability and fault toler
 
 An update domain is a logical group of the VMs which are used in the process of updating the Azure Infrastructure. Using an update domain, you can allow azure to have incremental or rolling upgrades across a deployment.
 
+- Every Update domain consists of one or more VMs which are grouped together with the physical hardware constraints and the host OS. This ensures that the VMs in the same update domain are updated or rebooted at the same time.
+
+- During the update process, only a single update domain is updated and rebooted at a time.
+
+- By default azure takes care of your VMs and updates them in a planned manner to provide the maximum availability and minimum downtime of the VMs as there are five (non-configurable) update domains for the VMs in an availability set.
+
+- You can have upto 20 update domains for the VMs in an availability set. 
+
+As a word onto update domain it is more about dividing the VMs into groups and updating them in a planned manner to provide the maximum availability and minimum downtime of the VMs.
+
 *Fault Domain*
+
+A fault domain is a logical grouping of the VMs which are used in the process of representing a physical hardware failure. Using a fault domain, you can allow azure to have a maximum availability of the VMs. It is more of like a rack in a datacenter or common set of hardware which can fail together, That's why two fault domains are created by default across an availability set. Two fault domains means that the VMs in an availability set are spread across two racks in a datacenter.
+
+**Horizontal and Vertical Scaling**
+
+Scaling is a very useful feature of the Cloud Computing. Scaling is a process of adding or removing the resources to your application based on the needs and requirements. Scalability can be said as something which increases the performance of the application and availability of the application by adding more resources to it. This also increases the throughput and response time of the whole application. There are two types of scaling:
+
+- Vertical Scaling:

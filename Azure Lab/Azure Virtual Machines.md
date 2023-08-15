@@ -192,4 +192,20 @@ A fault domain is a logical grouping of the VMs which are used in the process of
 
 Scaling is a very useful feature of the Cloud Computing. Scaling is a process of adding or removing the resources to your application based on the needs and requirements. Scalability can be said as something which increases the performance of the application and availability of the application by adding more resources to it. This also increases the throughput and response time of the whole application. There are two types of scaling:
 
-- Vertical Scaling:
+- Vertical Scaling: Vertical Scaling is a process of increasing or decreasing the size of the virtual machine based on the needs and requirements. For example the workload is more and you need more resources then you can increase the size of the VMs and if the workload is less then you can decrease the size of the VMs. This kind of act of vertical scaling makes the whole process easy and flexible. This kind of scaling is also known as scaling up or scaling down.
+
+Here are the some scenarios under which vertical scaling can be beneficial:
+
+1. If you have certain kind of business application made on the top of the virtual machines and they are not being utilized on the weekends and you want to save the cost then you can scale down the VMs on the weekends and scale up the VMs on the weekdays. This will help you to save the overall monthly cost of the VMs.
+
+2. You can scale up easily which can support the increased workload on the application, rather than adding more VMs to the application which will increase the cost of the application.
+
+- Horizontal Scaling: Under Horizontal Scaling you can add or remove the number of virtual machines based on the needs and requirements. When you implement horizontal scaling, you add more VMs to the application or increasing the number of instances of the application (Scale-In) and when you remove the VMs from the application or decreasing the number of instances of the application (Scale-Out). This kind of scaling is also known as scaling out or scaling in.
+
+There are some thing which needs to be kept in mind while making the decision of horizontal or vertical scaling:
+
+- Considering the Limitations: There are some limitations of the vertical scaling like you can't scale up beyond the maximum size of the VMs and you can't scale down below the minimum size of the VMs. There is a limitation availability of the hardware resources like CPU, Memory, etc under which it easily hits the upper limit. In the process of vertical scaling there is a downtime which requires the VM to stop or restart after the scaling process is completed. This downtime can be of few minutes or few hours based on the size of the VMs. As per the horizontal scaling is considered with less restrictions and limitations, it is more flexible and easy to implement.
+
+- Consider Flexibility: When you are working in cloud, horizontal scaling is more flexible and easy to implement. Horizontal Scaling implementation helps you to run potentially thousands of VMs and you manage the changes in the workload and throughput of the application. 
+
+- Considering Reprovisioning: When you remove an existing VM and replace it with a new VM, under this process of reprovisioning there will be interruption of services affecting the avaialbility of the application. So when you think about such kind of scenario you need to think about it and make proper plans for doing the same. One more thing which is needed to be considered is that the data stored in the VMs needs to be backed up before reprovisioning the VMs and then restoring or migrating it back to the new VMs.

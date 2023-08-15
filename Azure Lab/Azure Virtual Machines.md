@@ -192,7 +192,7 @@ A fault domain is a logical grouping of the VMs which are used in the process of
 
 Scaling is a very useful feature of the Cloud Computing. Scaling is a process of adding or removing the resources to your application based on the needs and requirements. Scalability can be said as something which increases the performance of the application and availability of the application by adding more resources to it. This also increases the throughput and response time of the whole application. There are two types of scaling:
 
-- Vertical Scaling: Vertical Scaling is a process of increasing or decreasing the size of the virtual machine based on the needs and requirements. For example the workload is more and you need more resources then you can increase the size of the VMs and if the workload is less then you can decrease the size of the VMs. This kind of act of vertical scaling makes the whole process easy and flexible. This kind of scaling is also known as scaling up or scaling down.
+- *Vertical Scaling:* Vertical Scaling is a process of increasing or decreasing the size of the virtual machine based on the needs and requirements. For example the workload is more and you need more resources then you can increase the size of the VMs and if the workload is less then you can decrease the size of the VMs. This kind of act of vertical scaling makes the whole process easy and flexible. This kind of scaling is also known as scaling up or scaling down.
 
 Here are the some scenarios under which vertical scaling can be beneficial:
 
@@ -200,7 +200,9 @@ Here are the some scenarios under which vertical scaling can be beneficial:
 
 2. You can scale up easily which can support the increased workload on the application, rather than adding more VMs to the application which will increase the cost of the application.
 
-- Horizontal Scaling: Under Horizontal Scaling you can add or remove the number of virtual machines based on the needs and requirements. When you implement horizontal scaling, you add more VMs to the application or increasing the number of instances of the application (Scale-In) and when you remove the VMs from the application or decreasing the number of instances of the application (Scale-Out). This kind of scaling is also known as scaling out or scaling in.
+- *Horizontal Scaling:* Under Horizontal Scaling you can add or remove the number of virtual machines based on the needs and requirements. When you implement horizontal scaling, you add more VMs to the application or increasing the number of instances of the application (Scale-In) and when you remove the VMs from the application or decreasing the number of instances of the application (Scale-Out). This kind of scaling is also known as scaling out or scaling in.
+
+![Image 2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/b6bc1d02e46edd3fe1a9df4d09819655c3684b38/Images/horizontal-scaling-vs-vertical-scaling.jpg)
 
 There are some thing which needs to be kept in mind while making the decision of horizontal or vertical scaling:
 
@@ -209,3 +211,17 @@ There are some thing which needs to be kept in mind while making the decision of
 - Consider Flexibility: When you are working in cloud, horizontal scaling is more flexible and easy to implement. Horizontal Scaling implementation helps you to run potentially thousands of VMs and you manage the changes in the workload and throughput of the application. 
 
 - Considering Reprovisioning: When you remove an existing VM and replace it with a new VM, under this process of reprovisioning there will be interruption of services affecting the avaialbility of the application. So when you think about such kind of scenario you need to think about it and make proper plans for doing the same. One more thing which is needed to be considered is that the data stored in the VMs needs to be backed up before reprovisioning the VMs and then restoring or migrating it back to the new VMs.
+
+**Virtual Machine Scale Sets**
+
+Azure Virtual Machine scale sets is a service which allows you to deploy and manage a set of identical VMs. Virtual machine scale sets increase the number of VMs as per the needs and requirements of the application and also reduces the amount of VM instances when the demand decreases. This is a very useful feature of the Azure VMs which allows you to have a high availability and scalability of the application. This also allows you to have a high performance computing and also allows you to have a high availability of the application.
+
+As if you use the virtual machines scale sets in place you don't need to pre-provision your virtual machines. As the workloads increases, the number of VMs increases and as the workloads decreases, the number of VMs decreases. The process of adding or removing the VMs is done automatically by the Azure or manually by the user. This also allows you to have a high availability of the application.
+
+- All the virtual machine instances are created from the same base operating system and the configuration. This allows you to manage multiple number of VMs as a single unit without doing extra work.
+
+- Virtual machine scale sets supports the use of the Azure load balancer which allows you for basic layer 4 traffic distribution, and Azure Application Gateway which allows you for advanced layer 7 traffic distribution and SSL offloading.
+
+- As per the customer need and requirements, the virtual machine scale sets can be scaled manually or automatically. This allows you to have a high availability of the application.
+
+- Virtual machine scale sets support upto 1000 virtual machine instances. If you create and upload your own custom VM image then you can have upto 600 virtual machine instances.

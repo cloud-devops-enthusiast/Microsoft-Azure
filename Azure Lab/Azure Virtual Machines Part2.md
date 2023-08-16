@@ -22,3 +22,36 @@
 - *Select inbound ports*: Select the inbound ports you want to use for this VM. Here we will be using as SSH (22), HTTP (80), HTTPS (443).
 
 ![Image 1.2](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/3f0e92015353e5b925c4eed270cd5090ba6bcebd/Images/portal.azure.com__pwa%3D13.png)
+
+3. Now you will be on the Disks tab, Here you will need to fill in the following details related to the disks:
+
+*VM Disk Encryption*
+
+- *Encryption at the host*: Select the encryption at the host you want to use for this VM. This option enables the encryption for the temporary disks and ephemeral OS disks with the platform managed keys  Here we will be using as Disabled.
+
+*OS Disk*
+
+- *OS Disk Size*: Select the OS disk size you want to use for this VM. Here we will be going with the Resize to 32 GiB (P4).
+- *OS Disk Type*: Select the OS disk type here we will be going with Standard SSD. (Locally Redudant Storage)
+- *Delete with VM*: Select this checkbox if you want to delete the created drive at the time of VM deletion.
+- *Key Management*: Select the key management as Platform managed key. This will be used to encrypt the OS disk.
+
+*Data Disk for the TestVM*
+
+As we don't have any data disk prior to this, we will be adding a new data disk to the VM. So for this we will be going ahead with the Create and attach a new disk option.
+
+- *Name*: Enter a name for your data disk. Here we will be using as TestVM_DataDisk.
+- *Source Type*: This option allows you to configure your data disk as Snapshot, Storage blob, or None (Empty Disk). Here we will be using as None (Empty Disk) as we dont have any data disk prior to this.
+- *Size*: This option determines the size of the data disk. Here we will be using as 32 GiB with Standard SSD (Locally Redudant Storage).
+- *Key Management*: Select the key management as Platform managed key. This will be used to encrypt the data disk.
+- *Enable Shared Disk*: Enable this option if you want to use the disk as a shared disk with other VMs as well. Here we will be using as Disabled.
+- *Delete Disk with VM*: Select this checkbox if you want to delete the created drive at the time of VM deletion. Here we will be checking this as Enabled.
+
+![Image 1.3](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1de1619f5b98e4871372e082e0942736070f9afe/Images/portal.azure.com__pwa%3D14.png)
+
+*Advanced*
+
+- *Use managed Disks*: Select this checkbox if you want to use managed disks for your VM. Here we will be using as Enabled.
+- *Ephemeral OS disk*: Select this checkbox if you want to use ephemeral OS disk for your VM. Here we will be using as None.
+
+![Image 1.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1de1619f5b98e4871372e082e0942736070f9afe/Images/portal.azure.com__pwa%3D15.png)

@@ -55,3 +55,23 @@ As we don't have any data disk prior to this, we will be adding a new data disk 
 - *Ephemeral OS disk*: Select this checkbox if you want to use ephemeral OS disk for your VM. Here we will be using as None.
 
 ![Image 1.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1de1619f5b98e4871372e082e0942736070f9afe/Images/portal.azure.com__pwa%3D15.png)
+
+4. Now you will be on the Networking tab, Here you will need to fill in the following details related to the networking:
+
+*Network Interface*
+
+- *Virtual Network*: This is the virtual network that will be used for the VM. Here we will be using as TestVM-vnet.
+- *Subnet*: This is the subnet that will be used for the VM. This will be the default subnet as (10.0.0.0/24).
+- *Public IP*: This is the public IP that will be used for the VM. Here we will be using as TestVM-ip.
+- *NIC network security group*: The NSG is a set of security rules that allow or deny any of the inbound or outbound traffic for the VM. Here we will be using the basic one.
+- *Public Inbound Ports*: This is the public inbound ports that will be used for the VM. Here we will be using as Allow selected ports.
+- *Select Inbound Ports*: This is the inbound ports that will be used for the VM. Here we will be using as SSH (22), HTTP (80), HTTPS (443).
+- *Delete public IP and NIC when VM is delete*: Select this checkbox if you want to delete the created public IP and NIC at the time of VM deletion. Here we will be using as Enabled.
+
+*Load Balancing*
+
+This shows you the option for placing your VM in a backend load balancer pool. Here we will be using as None.
+
+- *Place this virtual machine behind an existing load balancing solution*: We will be unchecking this as we will be using as None.
+
+![Image 1.5](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/aa361e833c355a0c5777fd261c9d377921f48360/Images/portal.azure.com__pwa%3D16.png)

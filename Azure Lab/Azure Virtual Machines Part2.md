@@ -54,7 +54,7 @@ As we don't have any data disk prior to this, we will be adding a new data disk 
 - *Use managed Disks*: Select this checkbox if you want to use managed disks for your VM. Here we will be using as Enabled.
 - *Ephemeral OS disk*: Select this checkbox if you want to use ephemeral OS disk for your VM. Here we will be using as None.
 
-![Image 1.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/1de1619f5b98e4871372e082e0942736070f9afe/Images/portal.azure.com__pwa%3D15.png)
+![Image 1.4](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/b3feaa3f11a58ec41d61225261e1f5f95102e209/Images/portal.azure.com__pwa%3D15.png)
 
 4. Now you will be on the Networking tab, Here you will need to fill in the following details related to the networking:
 

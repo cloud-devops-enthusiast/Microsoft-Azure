@@ -75,3 +75,96 @@ This shows you the option for placing your VM in a backend load balancer pool. H
 - *Place this virtual machine behind an existing load balancing solution*: We will be unchecking this as we will be using as None.
 
 ![Image 1.5](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/aa361e833c355a0c5777fd261c9d377921f48360/Images/portal.azure.com__pwa%3D16.png)
+
+5. Now you will be on the Management tab, Here you will need to fill in the following details related to the management:
+
+*Microsoft Defender for Cloud*
+
+It is a cloud-based security service that helps you protect your organization's data and endpoints against cyberthreats.
+
+*Identity*
+
+- *Enable system assigned managed identity*: This is a system assigned managed identity that enables the authentication to the cloud services without storing the credentials in the code. Here we will be using as Enabled.
+
+*Azure AD*
+
+- *Login with Azure AD*: This is the Azure AD feature that enables the authentication to the VM, enforcing MFA and enabling RBAC. Here we will be using as Enabled.
+
+*Auto-shutdown*
+
+This features enables the auto-shutdown of the VM at a specific time. Here we will be using as Disabled.
+
+*Backup*
+
+This feature enables the backup of the VM. Here we will be using as Disabled.
+
+*Guest OS Updates*
+
+- *Patch Orchestration Options*: This feature enables the patch orchestration options for the VM. Here we will be using as Image-Default.
+
+![Image 1.6](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/ee7138e61e8e58c7e9a654e0d1043ec320972af3/Images/portal.azure.com__pwa%3D17.png)
+
+7. Now you will be on the Monitoring tab where you can enable the monitoring for the VM.
+
+*Alerts*
+
+This feature enables the alerts for the VM.
+
+- *Enable recommended alert rules*: This feature enables the recommended alert rules for the VM. Here we will be using as Disabled.
+
+*Diagnostics*
+
+This feature enables the diagnostics for the VM.
+
+- *Boot Diagnostic*: This is a feature for the VM to troubleshoot the boot failures and this also improved the creation time of the virtual machine. Here we will be Enable with managed storage account.
+- *Enable OS guest Diagnostics*: It is more like of a monitoring feature that enables the monitoring of the VM. Here we will be using as Disabled.
+
+![Image 1.7](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/381843784b8b71ea6f0b11c2a11fb8ed961fdaf8/Images/portal.azure.com__pwa%3D18.png)
+
+8. Now you will be on the Advaned tab where you can enable the advanced features for the VM.
+
+*Extensions*
+
+This feature enables the extensions for the VM, this helps in the post deployment configuration of the VM.
+
+- *Extensions*: Here we will not be using any of the extensions here.
+
+*VM applications*
+
+This feature allows you to install the applications on the VM at the time of deployment.
+
+*Custom data and cloud init*
+
+This feature allows you to run the custom scripts at the time of deployment. You can also add other data while the process of provisioning the VM.
+
+- *Custom data*: Here we will be using as None.
+
+*User Data*
+
+This feature allows you to have your data available on the VM at the time of deployment.
+
+*Performance (NVMe)*
+
+This feature allows you to have the NVMe disk for the VM and boost the performance of the VM.
+
+*Host*
+
+If you want to manage the host for the VM, you can enable this feature.
+
+*Capacity reservations*
+
+This feature allows you to reserve the capacity for the VM.
+
+*Proximity placement groups*
+
+If you want to keep your Azure Resources physically closer to each other, you can enable this feature.
+
+![Image 1.8](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/8107b9d20776c8a2c0c67426780be8665078f000/Images/portal.azure.com__pwa%3D19.png)
+
+9. Now you will be on the Tags tab where you can add the tags for the VM. These tag will help you in the billing and the management of the VM. If you create tags and change their assignments, you can use the tags to filter the view of your resources in the portal.
+
+![Image 1.9](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/bcafd6b746719ab9ff0635761a84ad31a58291d7/Images/portal.azure.com__pwa%3D20.png)
+
+10. At this step you will be on the Review + create tab. Here you can review all the settings that you have configured for the VM. If you want to make any changes, you can go back to the respective tab and make the changes. If you are satisfied with the settings, you can click on the Create button to create the VM.
+
+![Image 1.10](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/755f5777deb90cfd7fb7e4a80fb1b267516178f6/Images/portal.azure.com__pwa%3D21.png)

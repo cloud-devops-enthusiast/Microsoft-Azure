@@ -168,3 +168,48 @@ If you want to keep your Azure Resources physically closer to each other, you ca
 10. At this step you will be on the Review + create tab. Here you can review all the settings that you have configured for the VM. If you want to make any changes, you can go back to the respective tab and make the changes. If you are satisfied with the settings, you can click on the Create button to create the VM.
 
 ![Image 1.10](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/755f5777deb90cfd7fb7e4a80fb1b267516178f6/Images/portal.azure.com__pwa%3D21.png)
+
+
+As you will create the VM you will see a pop-up to Generate the key pair. As you will click on download and create resources it will download a PEM file.
+
+![Image 1.11](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/6fc4a25f36c39ba5adc95d7ae6811c687da098a6/Images/Screenshot%202023-09-04%20230954.png)
+
+Here you can see that the VM is being created and other resources with it are created as well.
+
+![Image 1.12](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/6fc4a25f36c39ba5adc95d7ae6811c687da098a6/Images/Screenshot%202023-09-04%20231215.png)
+
+As the VM is created you can see the overview of the VM.
+
+Now, you can connect to the VM using the SSH key pair that you have downloaded or the connect page from the VM.
+
+![Image 1.13](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/4ed4e720e277d6564c265ffc0eb1abc76326a691/Images/Screenshot%202023-09-04%20232020.png)
+
+Now we will connect the VM using our local machine using the Azure CLI which is installed on our local machine.
+
+```
+az login
+```
+
+Enter this command to login to your Azure account, when you enter this command you will see a pop-up to login to your Azure account. Enter the credentials and login to your Azure account.
+
+![Image 1.14](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/c12a44a4ab6fa85c5f5494272e99b1d9fe0dda29/Images/Screenshot%202023-09-04%20232626.png)
+
+Now, you will need to enter the following command to connect to the VM.
+
+```
+az ssh vm --ip 20.163.159.76
+```
+
+Here you will need to enter the IP address of your VM. As you will enter this command you will see a pop-up to enter the SSH key pair. Enter the path of the PEM file that you have downloaded and enter the passphrase for the PEM file. Here it will ask you to install an extension ssh to connect to the VM. Enter y to install the extension.
+
+![Image 1.15](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/367c0a26abd213d2d2eae671c1984ca6d753fb17/Images/Screenshot%202023-09-04%20233742.png)
+
+![Image 1.16](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/367c0a26abd213d2d2eae671c1984ca6d753fb17/Images/Screenshot%202023-09-04%20233925.png)
+
+Now, We will just update the VM.
+
+```
+sudo apt-get update
+```
+
+![Image 1.17](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/19daae4a4b77eeca67a4e8f12ce281a87cd32e43/Images/Screenshot%202023-09-04%20235013.png)

@@ -182,7 +182,7 @@ As the VM is created you can see the overview of the VM.
 
 Now, you can connect to the VM using the SSH key pair that you have downloaded or the connect page from the VM.
 
-![Image 1.13](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/4ed4e720e277d6564c265ffc0eb1abc76326a691/Images/Screenshot%202023-09-04%20232020.png)
+![Image 1.13](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/bdd96e4ea44f61e523c7328f2a1b57d7e50d306b/Images/Screenshot%202023-09-04%20232020.png)
 
 Now we will connect the VM using our local machine using the Azure CLI which is installed on our local machine.
 
@@ -192,7 +192,11 @@ az login
 
 Enter this command to login to your Azure account, when you enter this command you will see a pop-up to login to your Azure account. Enter the credentials and login to your Azure account.
 
-![Image 1.14](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/c12a44a4ab6fa85c5f5494272e99b1d9fe0dda29/Images/Screenshot%202023-09-04%20232626.png)
+![Image 1.14](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/bdd96e4ea44f61e523c7328f2a1b57d7e50d306b/Images/Screenshot%202023-09-04%20232626.png)
+
+Before connecting to your created VM you need to make your VM SSH ready, for which azure comes with all the pre-requisites installed on the VM to connect to it. This process lets you enable the port 22 on the VM with the Just in Time policy of the VM.
+
+![Image 1.145(https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/8c69930197f9b64810e99fd314d9dfb48d0a0829/Images/Screenshot%202023-09-06%20220925.png)
 
 Now, you will need to enter the following command to connect to the VM.
 
@@ -202,14 +206,49 @@ az ssh vm --ip 20.163.159.76
 
 Here you will need to enter the IP address of your VM. As you will enter this command you will see a pop-up to enter the SSH key pair. Enter the path of the PEM file that you have downloaded and enter the passphrase for the PEM file. Here it will ask you to install an extension ssh to connect to the VM. Enter y to install the extension.
 
-![Image 1.15](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/367c0a26abd213d2d2eae671c1984ca6d753fb17/Images/Screenshot%202023-09-04%20233742.png)
+![Image 1.16](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/367c0a26abd213d2d2eae671c1984ca6d753fb17/Images/Screenshot%202023-09-04%20233742.png)
 
-![Image 1.16](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/367c0a26abd213d2d2eae671c1984ca6d753fb17/Images/Screenshot%202023-09-04%20233925.png)
+![Image 1.17](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/8c69930197f9b64810e99fd314d9dfb48d0a0829/Images/Screenshot%202023-09-04%20233925.png)
 
 Now, We will just update the VM.
 
 ```
-sudo apt-get update
+sudo apt-get -y update
 ```
 
-![Image 1.17](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/19daae4a4b77eeca67a4e8f12ce281a87cd32e43/Images/Screenshot%202023-09-04%20235013.png)
+![Image 1.18](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/fcdc6ad8a47252c96d2afcc2b64f70da2fd6b8f8/Images/Screenshot%202023-09-04%20235013.png)
+
+Now, we will be installing NGINX web server on the VM.
+
+```
+sudo apt-get -y install nginx
+```
+
+![Image 1.19](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/bf6a47f29d6f15f4124048765515cf2cd37dccce/Images/Screenshot%202023-09-06%20230034.png)
+
+![Image 1.20](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/bf6a47f29d6f15f4124048765515cf2cd37dccce/Images/Screenshot%202023-09-06%20230057.png)
+
+Now, we will check the status of the NGINX web server.
+
+```
+sudo systemctl status nginx
+```
+
+![Image 1.21](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/3198aed638bc406b827ded28ff71db7228f0d675/Images/Screenshot%202023-09-06%20231046.png)
+
+
+Now, we will check the status of the NGINX web server on the browser.
+
+```
+http://<PUBLIC IP ADDRESS>/
+```
+
+![Image 1.22](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/fa7e3a31e134852bcc356fa3331ee653432e8e38/Images/Screenshot%202023-09-06%20231347.png)
+
+We can also check the status of the NGINX web server on the Azure portal.
+
+```
+curl -m 80 <PublicIPAddress>
+```
+
+![Image 1.23](https://github.com/cloud-devops-enthusiast/Microsoft-Azure/blob/5c569036c90bf8f7394555ad327508e5fb81edab/Images/Screenshot%202023-09-06%20232534.png)
